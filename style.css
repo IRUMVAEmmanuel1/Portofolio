@@ -1,3 +1,12 @@
+:root {
+  --color-primary: #2F8159; 
+  --color-secondary: #24B46F; /* gray */
+  --color-success: #28a745; /* green */
+  --color-warning: #ffc107; /* yellow */
+  --color-danger: #dc3545; 
+  --color-like:red;
+}
+
 body {
 	font-family: "Nunito Sans", sans-serif;
 	margin: 0px;
@@ -7,15 +16,20 @@ body {
 	padding: 0px;
 	margin: 0px;
 	display: flex;
+  height: 6rem;
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0px 2px 0px 0px rgb(231, 231, 231);
+}
+.headerLeft{
+  margin-right: 20px;
 }
 .headerLeft ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
   text-indent: 20px;
+  color: var(--color-primary);
 }
 
 .header ul li{
@@ -23,4 +37,23 @@ body {
 }
 .header ul li a{
   text-decoration: none;
+  color: var(--color-primary);
+  font-weight: semi-bold;
+}
+.header ul li a:hover{
+  font-size: 17px;
+}
+
+.headerRight{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#loginButton{
+  background-color: var(--color-primary);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: semi-bold;
 }
