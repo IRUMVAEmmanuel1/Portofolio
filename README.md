@@ -1,2 +1,2 @@
 ## Welcome to Emmanuel Irumva Portofolio.
-###Containing the skills, portofolio and blogs post 
+Containing the skills, portofolio and blogs post 
