@@ -1,12 +1,11 @@
 :root {
-  --color-primary: #2F8159; 
-  --color-secondary: #24B46F; /* gray */
-  --color-success: #28a745; /* green */
-  --color-warning: #ffc107; /* yellow */
-  --color-danger: #dc3545; 
-  --color-like:red;
+	--color-primary: #2f8159;
+	--color-secondary: #24b46f; /* gray */
+	--color-success: #28a745; /* green */
+	--color-warning: #ffc107; /* yellow */
+	--color-danger: #dc3545;
+	--color-like: red;
 }
-
 body {
 	font-family: "Nunito Sans", sans-serif;
 	margin: 0px;
@@ -16,44 +15,119 @@ body {
 	padding: 0px;
 	margin: 0px;
 	display: flex;
-  height: 6rem;
+	height: 4rem;
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0px 2px 0px 0px rgb(231, 231, 231);
 }
-.headerLeft{
-  margin-right: 20px;
+.headerLeft {
+	margin-right: 20px;
 }
 .headerLeft ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  text-indent: 20px;
-  color: var(--color-primary);
+	text-indent: 20px;
+	color: var(--color-primary);
 }
 
-.header ul li{
-  list-style-type: none;
+.header ul li {
+	list-style-type: none;
 }
-.header ul li a{
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: semi-bold;
+.header ul li a {
+	text-decoration: none;
+	color: var(--color-primary);
+	font-weight: semi-bold;
 }
-.header ul li a:hover{
-  font-size: 17px;
+.header ul li a:hover {
+	font-size: 17px;
 }
 
-.headerRight{
-  display: flex;
+.headerRight {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#loginButton {
+	background-color: var(--color-primary);
+	color: white;
+	padding: 5px 12px;
+	border-radius: 5px;
+	font-weight: semi-bold;
+}
+.describeMe {
+	margin-top: 5%;
+}
+.myProfile {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding: 40px;
+	margin: 0px 30px 0px 6px;
+}
+.myName {
+	font-size: 20px;
+	color: #282938;
+}
+.career {
+	font-size: 42px;
+}
+.career > span {
+	color: #2f8159;
+}
+.touch {
+	border-radius: 5px;
+	padding: 12px;
+	background-color: #2f8159;
+	color: white;
+	font-weight: bold;
+	border: none;
+}
+.skillsCard {
+	display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin-left: 10%;
+  
+  
+	;
 }
 
-#loginButton{
-  background-color: var(--color-primary);
-  color: white;
-  padding: 5px 12px;
-  border-radius: 5px;
-  font-weight: semi-bold;
+.card1 {
+	background-color: green;
+  width: calc(24.33% - 10px); 
+  height: 20%;
+  margin-right: 30px;
+  margin-bottom: 20px; 
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  /* padding: 20px; */
+ 
+}
+
+.skillsCard{
+	column-count: 3;
+  column-gap: 20px;
+  column-rule: 4px dotted rgb(79 185 227);
+}
+
+.upSkills p{
+	background-color: green;
+	gap: 20px;
+}
+
+.container1{
+	column-count: 3;
+  /* column-width: 150px; */
+  column-gap: 12px;
+}
+
+.card {
+  background-color: rgb(207 232 220);
+  border: 2px solid rgb(79 185 227);
+  padding: 10px;
+  margin: 0 0 1em 0;
 }
