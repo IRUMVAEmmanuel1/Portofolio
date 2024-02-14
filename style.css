@@ -242,13 +242,11 @@ footer {
 	text-align: center;
 	margin-top: 5%;
 }
-
 .footer-columns {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-
 .column {
 	list-style: none;
 }
