@@ -1,3 +1,4 @@
+
 .body {
 	font-family: "Nunito Sans", sans-serif;
 	background-color: aquamarine;
@@ -12,32 +13,61 @@
 	margin-top: 5%;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-.login p {
-	font-size: 40px;
-}
-.loginInput {
-	padding: 10px;
-}
-
-.loginForm {
-	margin-left: 30px;
-}
-input {
-	border-radius: 5px;
-	border: 2px solid #2f8159;
+.formContainer {
+  margin-top: 5%;
+  margin-left: 35%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  -webkit-border-radius:;
+  -moz-border-radius:;
+  -ms-border-radius:;
+  -o-border-radius:;
 }
 
-input::after {
-	border: 2px solid #2f8159;
-}
-.loginButton {
-	font-size: 17px;
-	margin-top: 20px;
-	padding: 8px 20px;
-	border-radius: 5px;
-	border: 2px solid #2f8159;
+.formContainer h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+.form-group {
+  margin-bottom: 20px;
+}
 
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 96%;
+  padding: 10px;
+  border: 1px solid #b9e7b3;
+  border-radius: 5px;
+}
+.registerP{
+	margin-left: 65%;
+}
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0DC58B;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: hsl(160, 66%, 18%);
+}
+
+.registerP a{
+	text-decoration: none;
+	color:#0DC58B;
+}
