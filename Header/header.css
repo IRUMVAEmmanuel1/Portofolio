@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.headContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu ul li {
+  margin-right: 20px;
+}
+
+.menu ul li:last-child {
+  margin-right: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .headContainer {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active {
+    color: #fff;
+  }
+
+  .menu-toggle.active + .menu {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .menu ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 768px) {
+  /* Other existing CSS rules for mobile view */
+
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+  }
+
+  .menu.active ul {
+    display: block;
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+}

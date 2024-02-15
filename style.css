@@ -12,7 +12,7 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	margin: 0px;
 	padding: 0px;
-}
+/* }
 .header {
 	z-index: -1000;
 	padding: 0px;
@@ -55,10 +55,152 @@ body {
 #loginButton {
 	background-color: var(--color-primary);
 	color: white;
-	padding: 5px 12px;
+	padding: 4px 10px;
+	border-radius: 5px;
+	font-weight: semi-bold;
+} */
+
+-----------------
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  /* background-color:  var(--color-primary); */
+	color: black;
+  
+  padding: 10px 0;
+	box-shadow: 0px 2px 0px 0px rgb(231, 231, 231);
+}
+
+.headContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+color: black;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+	
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+
+.menu ul li {
+  margin-right: 20px;
+	color: black;
+}
+
+.menu ul li:last-child {
+  margin-right: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--color-primary);
+	font-weight: semi-bold;
+}
+#loginButton {
+	background-color: var(--color-primary);
+	color: white;
+	padding: 3px 10px;
 	border-radius: 5px;
 	font-weight: semi-bold;
 }
+#loginButton a{
+	color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .headContainer {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active {
+    color: #fff;
+  }
+
+  .menu-toggle.active + .menu {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .menu ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 768px) {
+  /* Other existing CSS rules for mobile view */
+
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+  }
+
+  .menu.active ul {
+    display: block;
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+}
+
+-----------------
 .describeMe {
 	margin-top: 5%;
 }
@@ -150,6 +292,7 @@ body {
 	width: 100%;
 	max-width: 100%;
 	display: block;
+	
 }
 
 .viewsLike {
@@ -276,4 +419,6 @@ hr {
 	margin: 20px 0;
 	border: 0;
 	border-top: 1px solid #ccc;
+}
+
 }

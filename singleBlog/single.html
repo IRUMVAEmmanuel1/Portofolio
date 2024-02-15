@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Blog Post</title>
+    <link rel="stylesheet" href="single.css">
+</head>
+<body>
+    <article class="blog-post">
+        <img src="../images/pexels-august-de-richelieu-4427611.jpg" alt="Blog Post Photo" class="post-photo">
+        <div class="post-info">
+            <h2 class="post-title">Web Development Best session</h2>
+            <p class="post-date">February 02, 2024</p>
+            <p class="post-author">Author: Emmanuel Irumva</p>
+        </div>
+        <div class="post-content">
+            <p>This is the content of the blog post. It can be as long as necessary, describing the topic in detail.</p>
+            
+        </div>
+        <section class="comments">
+            <h3>Comments</h3>
+            <ul class="comment-list">
+                <li class="comment">
+                    <div class="comment-author">John Doe</div>
+                    <div class="comment-text">I would like to join your Team for more discussion and happy to meet you in person.</div>
+                </li>
+            </ul>
+            <form class="comment-form">
+                <input type="text" id="comment-name" name="comment-name" required>
+                <label for="comment-text">Comment:</label>
+                <textarea id="comment-text" name="comment-text" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+                <p class="submit"><a href="../index.html">Home</a></p>
+            </form>
+        </section>
+    </article>
+</body>
+</html>
