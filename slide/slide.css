@@ -1,0 +1,23 @@
+.slide {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.slide img {
+  width: 200px; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add some space between image and content */
+}
+
+.blog-content {
+  flex-grow: 1; /* Allow content to expand */
+}
+
+.blog-content h2 {
+  margin-top: 0; /* Remove default margin */
+}
+
+.blog-content p {
+  margin-bottom: 10px; /* Add some space between title and description */
+}

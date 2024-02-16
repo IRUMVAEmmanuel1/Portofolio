@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Fixed Header with Hamburger Menu</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  .menu ul li {
+    margin-right: 20px;
+  }
+  .menu ul li:last-child {
+    margin-right: 0;
+  }
+  .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+  }
+  @media(max-width: 768px) {
+    .menu {
+      display: none;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="#" class="logo">Your Logo</a>
+  <div class="menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <div>
+      
+    </div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+</body>
+</html>

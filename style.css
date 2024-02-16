@@ -69,10 +69,36 @@ body {
 header {
   /* background-color:  var(--color-primary); */
 	color: black;
-  
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it's on top of other content */
   padding: 10px 0;
 	box-shadow: 0px 2px 0px 0px rgb(231, 231, 231);
 }
+.sticky-header {
+  background-color: transparent; /* Initial background color */
+  padding: 10px 0; /* Example padding */
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it's on top of other content */
+  transition: background-color 0.3s ease; /* Add transition for smooth color change */
+}
+
+.sticky-header.scrolled {
+  background-color: rgb(255, 251, 251); /* Change background color when scrolled */
+}
+
+.sticky-header a {
+  color: white; /* Initial color */
+  text-decoration: none;
+}
+
+.sticky-header.scrolled a {
+  color: rgb(21, 163, 76); /* Change color when scrolled */
+}
+
 
 .headContainer {
   display: flex;
@@ -135,8 +161,11 @@ color: black;
 @media (max-width: 768px) {
   .headContainer {
     flex-wrap: wrap;
+		width: 35.1rem;
   }
-
+.myProfile{
+	width: 100%;
+}
   .menu {
     display: none;
     width: 100%;
@@ -314,9 +343,13 @@ color: black;
 	padding: 8px 15px;
 	font-size: 12px;
 	background-color: #0dc58b;
-	color: white;
+
 	border: none;
 	border-radius: 4px;
+}
+.readMoreButton a{
+	text-decoration: none;
+	color: white;
 }
 .time {
 	gap: 20px;
@@ -421,4 +454,179 @@ hr {
 	border-top: 1px solid #ccc;
 }
 
+}
+
+
+/* Media Query for Tablet */
+@media (max-width: 768px) {
+  /* Header */
+  .headContainer {
+    flex-wrap: wrap;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active {
+    color: #fff;
+  }
+
+  .menu-toggle.active + .menu {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .menu ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* Profile Section */
+  .myProfile {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .profileMe {
+    margin-top: 20px;
+  }
+
+  /* Skills Section */
+  .grid-container {
+    padding: 0 5%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* About Me Section */
+  .aboutMe {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* Portfolio Section */
+  .portImages {
+    padding: 0 5%;
+  }
+
+  /* Blog Post Section */
+  .portofolio {
+    margin-top: 20px;
+  }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 480px) {
+  /* Header */
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+  }
+
+  .menu.active ul {
+    display: block;
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+
+  /* Profile Section */
+  .myProfile {
+    padding: 10px;
+  }
+
+  .describeMe {
+    margin-top: 10%;
+  }
+
+  .touch {
+    width: 100%;
+  }
+
+  .profileMe img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* Skills Section */
+  .grid-container {
+    padding: 0 5%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* About Me Section */
+  .aboutMe {
+    padding: 10px;
+  }
+
+  /* Portfolio Section */
+  .portImages {
+    padding: 0 5%;
+  }
+
+  /* Blog Post Section */
+  .portofolio {
+    margin-top: 10px;
+  }
+
+  .card1 img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .viewsLike {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number,
+  .allSpan {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .likes {
+    margin-top: 5px;
+  }
+	.formContainer {
+	
+	margin-right: 70%;
+	
+}
 }
