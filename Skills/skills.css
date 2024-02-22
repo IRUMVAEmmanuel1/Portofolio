@@ -1,0 +1,23 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 cards in each row */
+  gap: 10px;
+}
+
+.card {
+  background-color: lightgray;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) { /* Adjust for tablet size */
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* Display 2 cards in each row on tablet */
+  }
+}
+
+@media (max-width: 480px) { /* Adjust for mobile size */
+  .card-grid {
+    grid-template-columns: 1fr; /* Display 1 card in each row on mobile */
+  }
+}

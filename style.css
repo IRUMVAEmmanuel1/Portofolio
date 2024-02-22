@@ -12,46 +12,10 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	margin: 0px;
 	padding: 0px;
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
-header {
-  /* background-color:  var(--color-primary); */
-	color: black;
-  position: -webkit-sticky; /* For Safari */
-  position: sticky;
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it's on top of other content */
-  padding: 10px 0;
-	box-shadow: 0px 2px 0px 0px rgb(231, 231, 231);
-}
-.sticky-header {
-  background-color: transparent; /* Initial background color */
-  padding: 10px 0; /* Example padding */
-  position: -webkit-sticky; /* For Safari */
-  position: sticky;
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it's on top of other content */
-  transition: background-color 0.3s ease; /* Add transition for smooth color change */
-}
-
-.sticky-header.scrolled {
-  background-color: rgb(255, 251, 251); /* Change background color when scrolled */
-}
-
-.sticky-header a {
-  color: white; /* Initial color */
-  text-decoration: none;
-}
-
-.sticky-header.scrolled a {
-  color: rgb(21, 163, 76); /* Change color when scrolled */
-}
-
-
 .headContainer {
   display: flex;
   justify-content: space-between;
@@ -59,7 +23,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-color: black;
+  color: black;
 }
 
 .logo {
@@ -416,7 +380,7 @@ hr {
     flex-wrap: wrap;
   }
 
-  .menu {
+  /* .menu {
     display: none;
     width: 100%;
   }
@@ -451,7 +415,7 @@ hr {
 
   .menu ul li:last-child {
     border-bottom: none;
-  }
+  } */
 
   /* Profile Section */
   .myProfile {
@@ -493,7 +457,7 @@ hr {
 
 /* Media Query for Mobile */
 @media (max-width: 480px) {
-  /* Header */
+  /* Header
   .menu ul {
     display: none;
     position: absolute;
@@ -515,7 +479,7 @@ hr {
 
   .menu ul li:last-child {
     border-bottom: none;
-  }
+  } */
 
   /* Profile Section */
   .myProfile {

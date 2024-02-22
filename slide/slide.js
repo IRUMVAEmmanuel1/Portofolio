@@ -1,21 +1,30 @@
+
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const carouselSlide = document.querySelector('.carousel-slide');
+
 let slideIndex = 0;
-showSlides();
+
+nextBtn.addEventListener('click', () => {
+  slideIndex++;
+  showSlides();
+});
+
+prevBtn.addEventListener('click', () => {
+  slideIndex--;
+  showSlides();
+});
 
 function showSlides() {
-  let slides = document.querySelectorAll('.slide');
-  if (slides.length === 0) return;
-  
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
+  const slides = document.querySelectorAll('.card1');
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
   }
-  
-  slideIndex++;
-  if (slideIndex > slides.length) slideIndex = 1;
-  slides[slideIndex - 1].style.display = 'block';
-  setTimeout(showSlides, 2000); // Change slide every 2 seconds
+  const offset = -(slideIndex * 100);
+  carouselSlide.style.transform = `translateX(${offset}%)`;
 }
 
-function moveSlide(n) {
-  slideIndex += n;
-  showSlides();
-}
+// Ensure initial responsiveness
+window.addEventListener('resize', showSlides);

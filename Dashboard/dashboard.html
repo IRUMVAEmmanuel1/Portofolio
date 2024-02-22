@@ -1,149 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Admin Dashboard</title>
-		<link rel="stylesheet" href="dashboard.css" />
-		<script
-			src="https://kit.fontawesome.com/48bcbf2c30.js"
-			crossorigin="anonymous"></script>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
-		<script src="dashboard.js"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-			rel="stylesheet" />
-	</head>
-	<body>
-		<aside class="sidebar">
-			<div class="logo">Admin Dashboard</div>
-			<div class="menu-toggle" onclick="toggleMenu()">
-				<i class="fas fa-bars"></i>
-			</div>
-			<nav class="side-menu">
-				<ul>
-					<li>
-						<a href="#" onclick="showTab('home')"
-							><i class="fas fa-home"></i> Home</a
-						>
-					</li>
-					<li>
-						<a href="#" onclick="showTab('articles')"
-							><i class="fas fa-newspaper"></i> Articles</a
-						>
-						<ul class="submenu">
-							<li>
-								<a href="#" onclick="showSubTab('all-articles')"
-									>All Articles</a
-								>
-							</li>
-							<li>
-								<a href="#" onclick="showSubTab('add-article')"
-									>Add New Article</a
-								>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" onclick="showTab('users')"
-							><i class="fas fa-user"></i> Users</a
-						>
-						<ul class="submenu">
-							<li>
-								<a href="#" onclick="showSubTab('all-users')">All Users</a>
-							</li>
-							<li>
-								<a href="#" onclick="showSubTab('add-user')">Add New User</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#" onclick="showTab('comments')"
-							><i class="fas fa-comments"></i> Comments</a
-						>
-						<ul class="submenu">
-							<li>
-								<a href="#" onclick="showSubTab('all-comments')"
-									>All Comments</a
-								>
-							</li>
-							<li>
-								<a href="#" onclick="showSubTab('pending-comments')"
-									>Pending Comments</a
-								>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</nav>
-		</aside>
-		<main class="main-content">
-			<div id="home" class="tab">
-				<div class="header">
-					<h1>Welcome to the Admin Dashboard</h1>
-				</div>
-				<div class="cards">
-					<div class="card">
-						<i class="fas fa-comments"></i>
-						<h3>Comments</h3>
-						<p>100</p>
-					</div>
-					<div class="card">
-						<i class="fas fa-thumbs-up"></i>
-						<h3>Likes</h3>
-						<p>500</p>
-					</div>
-					<div class="card">
-						<i class="fas fa-newspaper"></i>
-						<h3>Articles</h3>
-						<p>50</p>
-					</div>
-					<div class="card">
-						<i class="fas fa-book"></i>
-						<h3>Blogs</h3>
-						<p>50</p>
-					</div>
-				</div>
-			</div>
-			<div id="articles" class="tab" style="display: none">
-				<h2>Articles</h2>
-				<div id="all-articles" class="sub-tab" style="display: none">
-					<!-- Content for All Articles tab -->
-					<p>All Articles</p>
-				</div>
-				<div id="add-article" class="sub-tab" style="display: none">
-					<!-- Content for Add New Article tab -->
-					<p>Add New Article</p>
-				</div>
-			</div>
-			<div id="users" class="tab" style="display: none">
-				<h2>Users</h2>
-				<div id="all-users" class="sub-tab" style="display: none">
-					<!-- Content for All Users tab -->
-					<p>All Users</p>
-				</div>
-				<div id="add-user" class="sub-tab" style="display: none">
-					<!-- Content for Add New User tab -->
-					<p>Add New User</p>
-				</div>
-			</div>
-			<div id="comments" class="tab" style="display: none">
-				<h2>Comments</h2>
-				<div id="all-comments" class="sub-tab" style="display: none">
-					<!-- Content for All Comments tab -->
-					<p>All Comments</p>
-				</div>
-				<div id="pending-comments" class="sub-tab" style="display: none">
-					<!-- Content for Pending Comments tab -->
-					<p>Pending Comments</p>
-				</div>
-			</div>
-		</main>
-		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-		<script src="scripts.js"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://kit.fontawesome.com/48bcbf2c30.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="dashboard.js" defer></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">Admin Dashboard</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="side-menu">
+            <ul>
+                <li>
+                    <a href="#" onclick="showTab('home')"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li>
+                    <a href="#" onclick="showTab('articles')"><i class="fas fa-newspaper"></i> Articles</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="showSubTab('all-articles')">All Articles</a></li>
+                        <li><a href="#" onclick="showSubTab('add-article')">Add New Article</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="showTab('users')"><i class="fas fa-user"></i> Users</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="showSubTab('all-users')">All Users</a></li>
+                        <li><a href="#" onclick="showSubTab('add-user')">Add New User</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="showTab('comments')"><i class="fas fa-comments"></i> Comments</a>
+                    <ul class="submenu">
+                        <li><a href="#" onclick="showSubTab('all-comments')">All Comments</a></li>
+                        <li><a href="#" onclick="showSubTab('pending-comments')">Pending Comments</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="main-content">
+        <div id="home" class="tab">
+            <div class="header">
+                <h1>Welcome to the Admin Dashboard</h1>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Comments</h3>
+                    <p>100</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-thumbs-up"></i>
+                    <h3>Likes</h3>
+                    <p>500</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-book"></i>
+                    <h3>Articles</h3>
+                    <p>50</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users"></i>
+                    <h3>Users</h3>
+                    <p>152</p>
+                </div>
+            </div>
+        </div>
+        <div id="articles" class="tab" style="display: none">
+            <form class="article-form">
+                <textarea id="editor" name="editor"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="add-article" class="sub-tab" style="display: none">
+            <!-- Content for Add New Article tab -->
+            <p>Add New Article</p>
+        </div>
+        <div id="users" class="tab" style="display: none">
+            <h2>Users</h2>
+            <div id="all-users" class="sub-tab" style="display: none">
+                <!-- Content for All Users tab -->
+                <p>All Users</p>
+            </div>
+            <div id="add-user" class="sub-tab" style="display: none">
+                <!-- Content for Add New User tab -->
+                <p>Add New User</p>
+            </div>
+        </div>
+        <div id="comments" class="tab" style="display: none">
+            <h2>Comments</h2>
+            <div id="all-comments" class="sub-tab" style="display: none">
+                <!-- Content for All Comments tab -->
+                <p>All Comments</p>
+            </div>
+            <div id="pending-comments" class="sub-tab" style="display: none">
+                <!-- Content for Pending Comments tab -->
+                <p>Pending Comments</p>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
