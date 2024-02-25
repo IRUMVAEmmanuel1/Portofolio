@@ -1,3 +1,548 @@
-body{
-  font-family: 'Nunito Sans', sans-serif;
+:root {
+	--color-primary: #2f8159;
+	--color-secondary: #282938; /* gray */
+	--color-third: #0dc58b;
+	--color-greyDark: #515151;
+	--color-success: #28a745; /* green */
+	--color-warning: #ffc107; /* yellow */
+	--color-danger: #dc3545;
+	--color-like: red;
+}
+body {
+	font-family: "Nunito Sans", sans-serif;
+	margin: 0px;
+	padding: 0px;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.headContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: black;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+	
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+
+.menu ul li {
+  margin-right: 20px;
+	color: black;
+}
+
+.menu ul li:last-child {
+  margin-right: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--color-primary);
+	font-weight: semi-bold;
+}
+#loginButton {
+	background-color: var(--color-primary);
+	color: white;
+	padding: 3px 10px;
+	border-radius: 5px;
+	font-weight: semi-bold;
+}
+#loginButton a{
+	color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .headContainer {
+    flex-wrap: wrap;
+		width: 35.1rem;
+  }
+.myProfile{
+	width: 100%;
+}
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active {
+    color: #fff;
+  }
+
+  .menu-toggle.active + .menu {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  .menu ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+}
+@media (max-width: 768px) {
+  /* Other existing CSS rules for mobile view */
+
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+  }
+
+  .menu.active ul {
+    display: block;
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  }
+}
+
+-----------------
+.describeMe {
+	margin-top: 5%;
+}
+.myProfile {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding: 40px;
+	margin: 0px 30px 0px 6px;
+}
+.myName {
+	font-size: 20px;
+	color: #282938;
+}
+.career {
+	font-size: 42px;
+}
+.career > span {
+	color: #2f8159;
+}
+.touch {
+	border-radius: 5px;
+	padding: 12px;
+	background-color: #2f8159;
+	color: white;
+	font-weight: bold;
+	border: none;
+}
+
+.upSkills,
+.blogPost,
+.myPort {
+	margin-left: 4%;
+	text-indent: 2px;
+}
+.mySkills {
+	font-size: 20px;
+	color: var(--color-secondary);
+}
+.myExpertise,
+.blogPost,
+.myPort {
+	color: var(--color-secondary);
+	font-size: 40px;
+}
+.grid-container {
+	padding: 0 10% 0 10%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(100px, auto);
+	gap: 10px;
+}
+.card {
+	background-color: #515151;
+	border: 1px solid gray;
+	padding: 20px;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+}
+.bigMe {
+	font-size: 40px;
+}
+.aboutMe {
+	margin-left: 4%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--color-secondary);
+}
+
+.aboutMeWords {
+	margin-right: 4%;
+}
+
+.card1 {
+	display: block;
+	background-color: #ffffff;
+	border: 1px solid rgb(209, 209, 209);
+	padding: 20px;
+	text-align: center;
+	color: var(--color-greyDark);
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px rgb(231, 231, 231);
+}
+
+.card1 img {
+	height: 200px;
+	width: 100%;
+	max-width: 100%;
+	display: block;
+	
+}
+
+.viewsLike {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.allSpan {
+	color: var(--color-greyDark);
+	/* font-weight: bold; */
+}
+
+.number {
+	color: #0dc58b;
+	font-weight: bold;
+}
+.readMoreButton {
+	padding: 8px 15px;
+	font-size: 12px;
+	background-color: #0dc58b;
+
+	border: none;
+	border-radius: 4px;
+}
+.readMoreButton a{
+	text-decoration: none;
+	color: white;
+}
+.time {
+	gap: 20px;
+}
+.likes {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.likes img {
+	width: 12px;
+	height: 12px;
+}
+
+.formContainer {
+	margin-top: 5%;
+	margin-left: 35%;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 400px;
+}
+
+.formContainer h2 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	width: 96%;
+	padding: 10px;
+	border: 1px solid #b9e7b3;
+	border-radius: 5px;
+}
+
+button[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #0dc58b;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button[type="submit"]:hover {
+	background-color: #104d39;
+}
+
+footer {
+	background-color: #f8f8f8;
+	padding: 20px;
+	text-align: center;
+	margin-top: 5%;
+}
+.footer-columns {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.column {
+	list-style: none;
+}
+.fab {
+	color: #0dc58b;
+	font-size: 20px;
+}
+.column ul {
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.column ul li {
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+
+.column ul li a {
+	text-decoration: none;
+	color: #333;
+}
+
+hr {
+	margin: 20px 0;
+	border: 0;
+	border-top: 1px solid #ccc;
+}
+
+}
+
+
+/* Media Query for Tablet */
+@media (max-width: 768px) {
+  /* Header */
+  .headContainer {
+    flex-wrap: wrap;
+  }
+
+  /* .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.active {
+    color: #fff;
+  }
+
+  .menu-toggle.active + .menu {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #007bff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .menu ul li {
+    margin: 0;
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  } */
+
+  /* Profile Section */
+  .myProfile {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .profileMe {
+    margin-top: 20px;
+  }
+
+  /* Skills Section */
+  .grid-container {
+    padding: 0 5%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* About Me Section */
+  .aboutMe {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* Portfolio Section */
+  .portImages {
+    padding: 0 5%;
+  }
+
+  /* Blog Post Section */
+  .portofolio {
+    margin-top: 20px;
+  }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 480px) {
+  /* Header
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #007bff;
+    padding: 10px 0;
+  }
+
+  .menu.active ul {
+    display: block;
+  }
+
+  .menu ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menu ul li:last-child {
+    border-bottom: none;
+  } */
+
+  /* Profile Section */
+  .myProfile {
+    padding: 10px;
+  }
+
+  .describeMe {
+    margin-top: 10%;
+  }
+
+  .touch {
+    width: 100%;
+  }
+
+  .profileMe img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* Skills Section */
+  .grid-container {
+    padding: 0 5%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* About Me Section */
+  .aboutMe {
+    padding: 10px;
+  }
+
+  /* Portfolio Section */
+  .portImages {
+    padding: 0 5%;
+  }
+
+  /* Blog Post Section */
+  .portofolio {
+    margin-top: 10px;
+  }
+
+  .card1 img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .viewsLike {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number,
+  .allSpan {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .likes {
+    margin-top: 5px;
+  }
+	.formContainer {
+	
+	margin-right: 70%;
+	
+}
 }
