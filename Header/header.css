@@ -67,7 +67,7 @@ body {
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  /* float: right; */
+  float: right;
   padding: 28px 20px;
   position: relative;
   user-select: none;
@@ -217,10 +217,6 @@ body {
   transition: transform 0.3s ease-in-out;
   justify-content: center;
   align-items: center;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  -ms-border-radius: 0.25rem;
-  -o-border-radius: 0.25rem;
 }
 
 .card:hover {
