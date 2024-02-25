@@ -67,15 +67,22 @@ body {
 .header .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
+  /* float: right; */
   padding: 28px 20px;
   position: relative;
   user-select: none;
 }
-.loginButton{
+
+.menu li a{
+  color: #02b875;
+}
+
+.menu .loginButton a{
   background-color: #02b875;
   color: white;
   border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 0.7rem;
 
 }
 .loginButton li{
@@ -84,6 +91,15 @@ body {
 .loginButton li a{
   text-decoration: none;
  
+}
+.menu .loginButton a:hover{
+  background-color: #02b875;
+  color: white;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 0.7rem;
+
 }
 .header .menu-icon .navicon {
   background: #333;
