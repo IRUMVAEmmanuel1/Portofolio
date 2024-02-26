@@ -1,183 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Blog Post</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Single Blog Post</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f4;
+			}
 
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+			.container {
+				max-width: 800px;
+				margin: 20px auto;
+				padding: 20px;
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
 
-        .blog-image {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+			.blog-image {
+				width: 100%;
+				border-radius: 10px;
+				margin-bottom: 20px;
+			}
 
-        .blog-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
+			.blog-title {
+				font-size: 24px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 10px;
+			}
 
-        .blog-description {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 20px;
-        }
+			.blog-description {
+				font-size: 16px;
+				color: #666;
+				margin-bottom: 20px;
+			}
 
-        .posted-time {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 10px;
-        }
+			.posted-time {
+				font-size: 14px;
+				color: #999;
+				margin-bottom: 10px;
+			}
 
-        .likes {
-            font-size: 14px;
-            color: #2f8159;
-            margin-bottom: 10px;
-        }
+			.likes {
+				font-size: 14px;
+				color: #2f8159;
+				margin-bottom: 10px;
+			}
 
-        .comments-section {
-            margin-top: 20px;
-        }
+			.comments-section {
+				margin-top: 20px;
+			}
 
-        .comment {
-            margin-bottom: 10px;
-        }
+			.comment {
+				margin-bottom: 10px;
+			}
 
-        .comment img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
+			.comment img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
 
-        .comment-text {
-            display: inline-block;
-            background-color: #f0f0f0;
-            padding: 10px;
-            border-radius: 5px;
-        }
+			.comment-text {
+				display: inline-block;
+				background-color: #f0f0f0;
+				padding: 10px;
+				border-radius: 5px;
+			}
 
-        .comment-time {
-            font-size: 12px;
-            color: #999;
-        }
+			.comment-time {
+				font-size: 12px;
+				color: #999;
+			}
 
-        .comment-input {
-            width: calc(100% - 120px);
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-        }
+			.comment-input {
+				width: calc(100% - 120px);
+				padding: 10px;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				margin-bottom: 10px;
+			}
 
-        .send-button {
-            width: 100px;
-            padding: 10px;
-            background-color: #2f8159;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .send-button a{
-            color: #fff;
-            text-decoration: none;
-        }
-        .back-button {
-            padding: 10px 20px;
-            background-color: #ccc;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <img src="../images/pexels-mikhail-nilov-9301257.jpg" alt="Blog" class="blog-image">
-        <h2 class="blog-title">Kigali Special Economic Zone IOT Platform</h2>
-        <p class="blog-description">Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers. Clean, modern designs - optimized for 
-            engines, Clean, modern designs - optimized for , search engines,, search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            engines, Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optimized for , search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            and converting users to customers.
-            modern designs - optimized for 
-            engines, Clean, modern designs - optimized for , search engines,, search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            engines, Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optim
-            modern designs - optimized for 
-            engines, Clean, modern designs - optimized for , search engines,, search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            engines, Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optim
-            modern designs - optimized for 
-            engines, Clean, modern designs - optimized for , search engines,, search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            engines, Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optim
-            modern designs - optimized for 
-            engines, Clean, modern designs - optimized for , search engines,, search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            engines, Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optim
-            modern designs - optimized for 
-            engines, Clean, modern designs - optimized for , search engines,, search engines,
-            and converting users to customers. Clean, modern designs - optimized for , search engines,
-            and converting users to customers.
-            engines, Clean, modern designs - optimized for , search engines, Clean, modern designs - optimized for , search engines,
-            engines, Clean, modern designs - optim</p>
-        <p class="posted-time">Posted on January 1, 2024</p>
-        <p class="likes">Likes: 50</p>
-        
-        <div class="comments-section">
-            <div class="comment">
-                <img src="../images/profile-pic-removebg (1) (1).png" alt="User Avatar">
-                <div class="comment-text">
-                    <p>Happy to attend this webinar and am looking forward to join ths team</p>
-                    <p class="comment-time">Posted 2 hours ago</p>
-                </div>
-            </div>
+			.send-button {
+				width: 100px;
+				padding: 10px;
+				background-color: #2f8159;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			.send-button a {
+				color: #fff;
+				text-decoration: none;
+			}
+			.back-button {
+				padding: 10px 20px;
+				background-color: #ccc;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				text-decoration: none;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img
+				src="../images/pexels-mikhail-nilov-9301257.jpg"
+				alt="Blog"
+				class="blog-image" />
+			<h2 class="blog-title">Kigali Special Economic Zone IOT Platform</h2>
+			<p class="blog-description">
+				Clean, modern designs - optimized for , search engines, Clean, modern
+				designs - optimized for , search engines, and converting users to
+				customers. Clean, modern designs - optimized for , search engines, and
+				converting users to customers. Clean, modern designs - optimized for
+				engines, Clean, modern designs - optimized for , search engines,, search
+				engines, and converting users to customers. Clean, modern designs -
+				optimized for , search engines, and converting users to customers.
+				engines, Clean, modern designs - optimized for , search engines, Clean,
+				modern designs - optimized for , search engines, engines, Clean, modern
+				designs - optimized for , search engines, and converting users to
+				customers. Clean, modern designs - optimized for , search engines,
+				engines, Clean, modern designs - optimized for , search engines, and
+				converting users to customers. and converting users to customers. modern
+				designs - optimized for engines, Clean, modern designs - optimized for ,
+				search engines,, search engines, and converting users to customers.
+				Clean, modern designs - optimized for , search engines, and converting
+				users to customers. engines, Clean, modern designs - optimized for ,
+				search engines, Clean, modern designs - optimized for , search engines,
+				engines, Clean, modern designs - optim modern designs - optimized for
+				engines, Clean, modern designs - optimized for , search engines,, search
+				engines, and converting users to customers. Clean, modern designs -
+				optimized for , search engines, and converting users to customers.
+				engines, Clean, modern designs - optimized for , search engines, Clean,
+				modern designs - optimized for , search engines, engines, Clean, modern
+				designs - optim modern designs - optimized for engines, Clean, modern
+				designs - optimized for , search engines,, search engines, and
+				converting users to customers. Clean, modern designs - optimized for ,
+				search engines, and converting users to customers. engines, Clean,
+				modern designs - optimized for , search engines, Clean, modern designs -
+				optimized for , search engines, engines, Clean, modern designs - optim
+				modern designs - optimized for engines, Clean, modern designs -
+				optimized for , search engines,, search engines, and converting users to
+				customers. Clean, modern designs - optimized for , search engines, and
+				converting users to customers. engines, Clean, modern designs -
+				optimized for , search engines, Clean, modern designs - optimized for ,
+				search engines, engines, Clean, modern designs - optim modern designs -
+				optimized for engines, Clean, modern designs - optimized for , search
+				engines,, search engines, and converting users to customers. Clean,
+				modern designs - optimized for , search engines, and converting users to
+				customers. engines, Clean, modern designs - optimized for , search
+				engines, Clean, modern designs - optimized for , search engines,
+				engines, Clean, modern designs - optim
+			</p>
+			<p class="posted-time">Posted on January 1, 2024</p>
+			<p class="likes">Likes: 50</p>
 
-            <!-- Add more comments here -->
+			<div class="comments-section">
+				<div class="comment">
+					<img
+						src="../images/profile-pic-removebg (1) (1).png"
+						alt="User Avatar" />
+					<div class="comment-text">
+						<p>
+							Happy to attend this webinar and am looking forward to join ths
+							team
+						</p>
+						<p class="comment-time">Posted 2 hours ago</p>
+					</div>
+				</div>
 
-            <textarea class="comment-input" placeholder="Add your comment"></textarea>
-            <button class="send-button">Send</button>
-            <button class="send-button"><a href="../Header/header1.html">Back Home</a> </button>
-        </div>
+				<!-- Add more comments here -->
 
-        
-    </div>
-</body>
+				<textarea
+					class="comment-input"
+					placeholder="Add your comment"></textarea>
+				<button class="send-button"><a href="../index.html"> Send</button></a>
+				<button class="send-button">
+					<a href="../index.html">Back Home</a>
+				</button>
+			</div>
+		</div>
+	</body>
 </html>
