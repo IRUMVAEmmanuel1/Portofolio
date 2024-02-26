@@ -72,8 +72,9 @@ const openMenu = () => {
 
   let menu_logo = document.createElement("img");
   menu_logo.id = "menu-logo";
-  menu_logo.src = "./assets/images/logo.svg";
-  menu_logo.style.width = "60px";
+  menu_logo.src = "../images/MineLogo-removebg-preview.png";
+  menu_logo.style.width = "45";
+  menu_logo.style.height = "45px"
   menu_container.style.paddingLeft = "15px";
   menu_container.insertBefore(menu_logo, menu_container.childNodes[0]);
 
@@ -139,7 +140,7 @@ const openMenu = () => {
 
   let logout_photo = document.createElement("img");
   logout_photo.id = "logout-photo";
-  logout_photo.src = "https://github.com/diegoafv.png";
+  logout_photo.src = "../images/profile-pic-removebg (1) (1).png";
   logout_container.style.paddingLeft = "15px";
   logout_container.insertBefore(logout_photo, logout_container.childNodes[0]);
 

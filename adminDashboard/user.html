@@ -1,105 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Admin Dashboard</title>
-  </head>
-  <body>
-    <div class="container">
-      <aside class="sidebar">
-        <ul class="menu-list">
-          <li>
-            <div class="menu-container">
-              <button class="icon" id="menu">
-                <img src="./assets/images/menu.svg" alt="menu" />
-              </button>
-            </div>
-          </li>
-         
-          <li>
-            <button class="icon" id="dashboard">
-              <img src="./assets/images/grid.svg" alt="dashboard" />
-            </button>
-          </li>
-          <li>
-            <button class="icon" id="article">
-             <a href="./article.html"><img src="./assets/images/pet.svg" alt="article" /></a> 
-            </button>
-          </li>
-          <li>
-            <button class="icon" id="clients">
-              <img src="./assets/images/user.svg" alt="clients" />
-            </button>
-          </li>
-          <li>
-            <button class="icon" id="vets">
-              <img src="./assets/images/vet.svg" alt="vets" />
-            </button>
-          </li>
-          <li>
-            <button class="icon" id="settings">
-              <img src="./assets/images/settings.svg" alt="settings" />
-            </button>
-          </li>
-        </ul>
-        <div class="logout-container">
-          <button class="icon-logout">
-            <img src="./assets/images/log-out.svg" alt="logout" />
-          </button>
-        </div>
-      </aside>
-      <section class="main">
-        <table style="width: 70%;">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://www.cssscript.com/demo/sticky.css"
+			rel="stylesheet"
+			type="text/css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+			rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/48bcbf2c30.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>Admin Dashboard</title>
+	</head>
+	<body>
+		<div class="container">
+			<aside class="sidebar">
+				<ul class="menu-list">
+					<li>
+						<div class="menu-container">
+							<button class="icon" id="menu">
+								<a href="./index.html">
+                  <img src="./assets/images/menu.svg" alt="menu" />
+                </a>
+							</button>
+						</div>
+					</li>
+
+					<li>
+						<button class="icon" id="dashboard">
+							<a href="./index.html">
+                <img src="./assets/images/grid.svg" alt="dashboard" />
+              </a>
+						</button>
+					</li>
+					<li>
+						<button class="icon" id="article">
+							<a href="./article.html"
+								><img
+									src="./assets/images/email-removebg-preview.png"
+									alt="article"
+							/></a>
+						</button>
+					</li>
+					<li>
+						<button class="icon" id="clients">
+							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
+						</button>
+					</li>
+					<li>
+						<button class="icon" id="vets">
+							<a href="./message.html">
+                <img
+								src="./assets/images/news-removebg-preview.png"
+								alt="message" />
+              </a>
+						</button>
+					</li>
+					<li>
+						<button class="icon" id="settings">
+							<img src="./assets/images/settings.svg" alt="settings" />
+						</button>
+					</li>
+				</ul>
+				<div class="logout-container">
+					<button class="icon-logout">
+						<img src="./assets/images/log-out.svg" alt="logout" />
+					</button>
+				</div>
+			</aside>
+			<section class="main">
+				<h2>All Users</h2>
+				<table>
+					<tr>
+						<th>Username</th>
+						<th>gmail</th>
+						<th>Profile</th>
+            <th>Password</th>
+						<th>Action</th>
+					</tr>
+					<tr>
+						<td>Geome Ntwari</td>
+						<td>
+							kalisat@gmail.com
+						</td>
+						<td>
+							<img
+								src="../images/profile-pic-removebg (1) (1).png"
+								alt=""
+								width="42px"
+								height="42px" />
+						</td>
+            <td>********</td>
+						<td>
+							<i class="fa fa-edit" aria-hidden="true"></i>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</td>
+					</tr>
           <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Age</th>
-          </tr>
+						<td>kalisa</td>
+						<td>
+							rwgeome@gmail.com
+						</td>
+						<td>
+							<img
+								src="../images/profile-pic-removebg (1) (1).png"
+								alt=""
+								width="42px"
+								height="42px" />
+						</td>
+            <td>****</td>
+						<td>
+							<i class="fa fa-edit" aria-hidden="true"></i>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</td>
+					</tr>
           <tr>
-            <td>Jill</td>
-            <td>Smith</td>
-            <td>50</td>
-          </tr>
-          <tr>
-            <td>Eve</td>
-            <td>Jackson</td>
-            <td>94</td>
-          </tr>
-        </table>
-        
-      </section>
-    </div>
-  </body>
-  <script src="script.js"></script>
-  <script>
-try {
-  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
-    return true;
-  }).catch(function(e) {
-    var carbonScript = document.createElement("script");
-    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
-    carbonScript.id = "_carbonads_js";
-    document.getElementById("carbon-block").appendChild(carbonScript);
-  });
-} catch (error) {
-  console.log(error);
-}
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-LLWL5N9CSM');
-</script>
+						<td>Eric Kaul</td>
+						<td>
+							erickaw@gmail.com
+						</td>
+						<td>
+							<img
+								src="../images/profile-pic-removebg (1) (1).png"
+								alt=""
+								width="42px"
+								height="42px" />
+						</td>
+            <td>******</td>
+						<td>
+							<i class="fa fa-edit" aria-hidden="true"></i>
+							<i class="fa fa-trash-o" aria-hidden="true"></i>
+						</td>
+					</tr>
+				</table>
+			</section>
+		</div>
+	</body>
+	<script src="script.js"></script>
+	<script>
+		try {
+			fetch(
+				new Request(
+					"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+					{ method: "HEAD", mode: "no-cors" }
+				)
+			)
+				.then(function (response) {
+					return true;
+				})
+				.catch(function (e) {
+					var carbonScript = document.createElement("script");
+					carbonScript.src =
+						"//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+					carbonScript.id = "_carbonads_js";
+					document.getElementById("carbon-block").appendChild(carbonScript);
+				});
+		} catch (error) {
+			console.log(error);
+		}
+	</script>
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+		gtag("config", "G-LLWL5N9CSM");
+	</script>
 </html>

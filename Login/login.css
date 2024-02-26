@@ -1,9 +1,11 @@
 
 .body {
 	font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 	background-color: aquamarine;
-	padding: 0px;
-	margin: 0px;
+	
 }
 .container {
 	width: 50%;
@@ -64,7 +66,7 @@ button[type="submit"]:hover {
 }
 .submit a{
   text-decoration: none;
-color: white;
+   color: white;
 }
 .registerP a, .HomeH a{
 	text-decoration: none;
@@ -80,4 +82,20 @@ color: white;
 }
 .Thome a{
   text-decoration: none;
+}
+/* * Media Query for Tablet * */
+@media (max-width: 768px) {
+  
+  .formContainer {
+   
+    margin-left: 20%;
+    
+  }
+  @media only screen and (max-width: 600px) {
+    .formContainer {
+   
+      margin-left: 2%;
+      
+    }
+  }
 }
