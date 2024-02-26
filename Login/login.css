@@ -1,9 +1,11 @@
 
 .body {
 	font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 	background-color: aquamarine;
-	padding: 0px;
-	margin: 0px;
+	
 }
 .container {
 	width: 50%;
@@ -21,10 +23,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 400px;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
 }
 
 .formContainer h2 {
@@ -66,7 +64,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: hsl(160, 66%, 18%);
 }
-
+.submit a{
+  text-decoration: none;
+   color: white;
+}
 .registerP a, .HomeH a{
 	text-decoration: none;
 	color:#0DC58B;
@@ -81,4 +82,20 @@ button[type="submit"]:hover {
 }
 .Thome a{
   text-decoration: none;
+}
+/* * Media Query for Tablet * */
+@media (max-width: 768px) {
+  
+  .formContainer {
+   
+    margin-left: 20%;
+    
+  }
+  @media only screen and (max-width: 600px) {
+    .formContainer {
+   
+      margin-left: 2%;
+      
+    }
+  }
 }

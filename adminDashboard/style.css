@@ -1,7 +1,7 @@
 :root {
   --body-bg-color: #dce4e3;
   --green: #18c29c;
-  --light-green: #8ed7c6;
+  --light-green: #8aeeee;
   --light-grey: #dce4e3;
   --text-color: #084236;
 }
@@ -12,7 +12,6 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   background-color: var(--body-bg-color);
 }
@@ -192,6 +191,7 @@ body {
 input[type="text"],
 input[type="email"],
 input[type="password"],
+input[type="file"],
 textarea {
   width: 96%;
   padding: 10px;
@@ -232,6 +232,28 @@ button[type="submit"]:hover {
 }
 
 /* articles ends here */
+
+/* Table start content */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td{
+  color: black;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  /* background-color: #dddddd; */
+}
+/* Table ends here */
 
 /* media queries */
 
