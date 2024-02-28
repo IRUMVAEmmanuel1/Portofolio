@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Register</title>
-    
-    <link rel="stylesheet" href="../Login/login.css">
-	</head>
-	<body>
-		<div class="formContainer">
-			<h2>Register Form</h2>
-			<form id="form">
-				<div class="form-group">
-					<label for="name">User name:</label>
-					<input type="text" id="name" name="name" required placeholder="Enter your username ">
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" required placeholder="Enter your email">
-				</div>
-				<div class="form-group">
-					<label for="password">Password:</label>
-					<input type="password" id="email" name="email" required placeholder="Enter your password">
-				</div>
-				<div class="Thome">
-					<p class="HomeH"><a href="../index.html">Home</a></p>
-					<p class="registerP">Back to <span class="realR"> <a href="../Login/login.html">Login</a> </span></p>
-				</div>
-				<button type="submit">Register</button>
-			</form>
-			
-		</div>
-	</body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
+rel="stylesheet" />
+<link rel="stylesheet" href="login.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+rel="stylesheet" />
+<script src="./login.js"></script>
+
+<script>
+//new validation form
+
+const namo = document.getElementById("namo");
+const password = document.getElementById("password");
+const form = document.getElementById("form");
+const name_error = document.getElementById('name_error');
+
+form.addEventListener('submit', (e) => {
+    if (namo.value === '' || namo.value == null) {
+        e.preventDefault();
+        name_error.innerHTML = "Username is required";
+    }
+});
+</script>
+</head>
+<body>
+
+<div class="formContainer">
+<h2>Login Form</h2>
+<form id="form">
+<div class="form-group">
+<label for="namo">Username</label>
+<input
+type="text"
+id="namo"
+placeholder="Enter your username or email" />
+<span id="name_error" class="error"></span>
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input
+type="password"
+id="password"
+placeholder="Enter your password" />
+</div>
+
+<p class="registerP">
+Click here to
+<span class="realR">
+<a href="../Register/register.html">Register</a>
+</span>
+</p>
+<button type="submit" class="submit">Login</button>
+</form>
+</div>
+</body>
 </html>

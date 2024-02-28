@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Login</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
-			rel="stylesheet" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="login.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-			rel="stylesheet" />
-			<script src="./login.js"></script>
-	</head>
-	<body>
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
+rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
+rel="stylesheet" />
+<link rel="stylesheet" href="login.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+rel="stylesheet" />
+<script src="./login.js"></script>
 
-		<div class="formContainer">
-			<h2>Login Form</h2>
-			<form name="myForm" onsubmit="return myForm()">
-				<div class="form-group">
-					<label for="name">User name / Gmail</label>
-					<input
-						type="text"
-						id="name"
-						name="fname"
-						placeholder="Enter your username or gmail" />
-				</div>
-				<div class="form-group">
-					<label for="password">Password:</label>
-					<input
-						type="password"
-						id="password"
-						name="password"
-						placeholder="Enter your password" />
-				</div>
+<script>
+function validateForm() {
+var name = document.forms["myForm"]["fname"].value;
+var password = document.forms["myForm"]["password"].value;
+if (name == "") {
+alert("Name must be filled out");
+return false;
+}
+if (password == "") {
+alert("Password must be filled out");
+return false;
+}
+}
+</script>
+</head>
+<body>
 
-				<p class="registerP">
-					Click here to
-					<span class="realR">
-						<a href="../Register/register.html">Register</a>
-					</span>
-				</p>
-				<button type="submit" class="submit">
-					<a href="../adminDashboard/index.html"> Login</a>
-				</button>
-			</form>
-		</div>
-	</body>
+<div class="formContainer">
+<h2>Login Form</h2>
+<form name="myForm" onsubmit="return validateForm()">
+<div class="form-group">
+<label for="name">User name</label>
+<input
+type="text"
+id="name"
+name="fname"
+placeholder="Enter your username or gmail" />
+</div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input
+type="password"
+id="password"
+name="password"
+placeholder="Enter your password" />
+</div>
+
+<p class="registerP">
+Click here to
+<span class="realR">
+<a href="../Register/register.html">Register</a>
+</span>
+</p>
+<button type="submit" class="submit">
+<a href="../adminDashboard/index.html"> Login</a>
+</button>
+</form>
+</div>
+</body>
 </html>
