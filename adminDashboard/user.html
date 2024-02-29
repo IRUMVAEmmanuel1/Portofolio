@@ -17,6 +17,7 @@
 			src="https://kit.fontawesome.com/48bcbf2c30.js"
 			crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css" />
+		<script src="../Register/reguser.js"></script>
 		<title>Admin Dashboard</title>
 	</head>
 	<body>
@@ -77,71 +78,22 @@
 			</aside>
 			<section class="main">
 				<h2>All Users</h2>
-				<table>
-					<tr>
-						<th>Username</th>
-						<th>gmail</th>
-						<th>Profile</th>
-            <th>Password</th>
-						<th>Action</th>
-					</tr>
-					<tr>
-						<td>Geome Ntwari</td>
-						<td>
-							kalisat@gmail.com
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-            <td>********</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-          <tr>
-						<td>kalisa</td>
-						<td>
-							rwgeome@gmail.com
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-            <td>****</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-          <tr>
-						<td>Eric Kaul</td>
-						<td>
-							erickaw@gmail.com
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-            <td>******</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
+				<table id="userTable">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Password</th>
+						</tr>
+					</thead>
+					<tbody id="userTableBody">
+						<!-- Users will be displayed here -->
+					</tbody>
 				</table>
+				
 			</section>
 		</div>
+		
 	</body>
 	<script src="script.js"></script>
 	<script>

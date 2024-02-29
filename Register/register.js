@@ -13,3 +13,4 @@ form.addEventListener('submit', (e) => {
 		name_error.innerHTML = "Title is required";
 	}
 });
+
