@@ -107,7 +107,7 @@ const openMenu = () => {
 
   let p_settings = document.createElement("p");
   p_settings.id = "p-settings";
-  p_settings.innerHTML = "Settings";
+  p_settings.innerHTML = "All Articles";
   settings.style.width = "220px";
   settings.style.justifyContent = "left";
   settings.appendChild(p_settings);

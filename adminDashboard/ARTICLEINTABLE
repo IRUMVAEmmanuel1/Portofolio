@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Blog</title>
+  <script src="./cards.js"></script>
+  <script src="./adminDashboard/adminValidation.js"></script>
+  <!-- Include necessary stylesheets and scripts -->
+</head>
+<body>
+  <!-- Single blog content -->
+  <div id="singleBlogContent">
+    <!-- Blog title -->
+    <h2 id="blogTitle"></h2>
+    <!-- Blog image -->
+    <img id="blogImage" src="" alt="Blog Image">
+    <!-- Blog content -->
+    <p id="blogContent"></p>
+    <!-- Like button -->
+    <button id="likeButton">Like</button>
+    <!-- Comments section -->
+    <div id="commentsSection">
+      <!-- Comments will be displayed here -->
+    </div>
+    <!-- Comment form -->
+    <form id="commentForm">
+      <input type="text" id="commentInput" placeholder="Add a comment">
+      <button type="submit">Comment</button>
+    </form>
+  </div>
+  <table id="articleTable" style="margin-top: 10%;">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Image</th>
+        <th>Content</th>
+        <th>Actions</th> 
+      </tr>
+    </thead>
+    <tbody id="articleTableBody">
+      <!-- Table body will be populated dynamically -->
+    </tbody>
+  </table>
+  
+  <!-- Include necessary scripts -->
+</body>
+</html>

@@ -27,18 +27,14 @@
 					<li>
 						<div class="menu-container">
 							<button class="icon" id="menu">
-								<a href="./index.html">
-                  <img src="./assets/images/menu.svg" alt="menu" />
-                </a>
+								<img src="./assets/images/menu.svg" alt="menu" />
 							</button>
 						</div>
 					</li>
 
 					<li>
 						<button class="icon" id="dashboard">
-							<a href="./index.html">
-								<img src="./assets/images/grid.svg" alt="dashboard" />
-							</a>
+							<img src="./assets/images/grid.svg" alt="dashboard" />
 						</button>
 					</li>
 					<li>
@@ -51,8 +47,8 @@
 						</button>
 					</li>
 					<li>
-						<button class="icon" id="clients">
-							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
+						<button class="icon" id="settings">
+							<a href="./allBlogs.html"><img src="../adminDashboard/assets/images/email-removebg-preview.png" alt="settings" /></a>
 						</button>
 					</li>
 					<li>
@@ -60,19 +56,32 @@
 							<a href="./message.html">
                 <img
 								src="./assets/images/news-removebg-preview.png"
-								alt="message" />
+								alt="allBlogs" />
               </a>
 						</button>
 					</li>
 					<li>
-						<button class="icon" id="settings">
-							<img src="./assets/images/settings.svg" alt="settings" />
+						<button class="icon" id="clients">
+							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
 						</button>
 					</li>
+					<!-- <li>
+						<button class="icon" id="vets">
+							<a href="./message.html">
+                <img
+								src="./assets/images/news-removebg-preview.png"
+								alt="message" />
+              </a>
+						</button>
+					</li> -->
+
+					
 				</ul>
 				<div class="logout-container">
 					<button class="icon-logout">
-						<img src="./assets/images/log-out.svg" alt="logout" />
+						<a href="../index.html">
+							<img src="./assets/images/log-out.svg" alt="logout" />
+						</a>
 					</button>
 				</div>
 			</aside>
@@ -100,48 +109,7 @@
 						</div>
 						<button  id="saveButton" type="submit">SAVE</button>
 					</form>
-					
-					<table id="articleTable" style="margin-top: 10%;">
-						<thead>
-							<tr>
-								<th>Title</th>
-								<th>Image</th>
-								<th>Content</th>
-								<th>Actions</th> 
-							</tr>
-						</thead>
-						<tbody id="articleTableBody">
-							<!-- Table body will be populated dynamically -->
-						</tbody>
-					</table>
-					<!-- Add a modal for editing articles -->
-<div id="editModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Edit Article</h2>
-    <form id="editForm">
-      <div class="form-group">
-        <label for="editTitle">Title</label>
-        <input type="text" id="editTitle" name="editTitle" placeholder="Enter Blog Title" />
-      </div>
-      <div class="form-group">
-        <label for="editImage">Image</label>
-        <input type="file" id="editImage" name="editImage" />
-      </div>
-      <div class="form-group">
-        <label for="editContent">Content</label>
-        <textarea id="editContent" name="editContent" cols="4" rows="4"></textarea>
-      </div>
-      <button type="button" id="saveEdit">Save</button>
-    </form>
-  </div>
-</div>
-
-				</div>
 				
-		
-			
-		</div>
 	</body>
 	<script src="script.js"></script>
 	<script>

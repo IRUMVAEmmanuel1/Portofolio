@@ -13,10 +13,11 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
 			rel="stylesheet" />
-		<script
-			src="https://kit.fontawesome.com/48bcbf2c30.js"
-			crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css" />
+		<script src="./ckeditor/ckeditor.js"></script>
+		<script
+		src="https://kit.fontawesome.com/48bcbf2c30.js"
+		crossorigin="anonymous"></script>
 		<title>Admin Dashboard</title>
 	</head>
 	<body>
@@ -30,10 +31,11 @@
 							</button>
 						</div>
 					</li>
-
 					<li>
 						<button class="icon" id="dashboard">
-							<img src="./assets/images/grid.svg" alt="dashboard" />
+							<a href="./index.html">
+								<img src="./assets/images/grid.svg" alt="dashboard" />
+							</a>
 						</button>
 					</li>
 					<li>
@@ -85,94 +87,71 @@
 				</div>
 			</aside>
 			<section class="main">
-				<h2>All Messages</h2>
-				<table>
-					<tr>
-						<th>User</th>
-						<th>Comment</th>
-						<th>Profile</th>
-						<th>Action</th>
-					</tr>
-					<tr>
-						<td>Kalima Patrick</td>
-						<td>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo,
-							quasi cupiditate minima hic culpa quidem! Labore blanditiis odio
-							eaque necessitatibus officia rem error ipsa, eum repellendus
-							delectus recusandae distinctio eius!
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-					<tr>
-						<td>Young Junior Dev</td>
-						<td>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Consequuntur saepe animi accusantium, provident 
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
+				<div class="formContainer" id="form">
+					<h2>All Articles</h2>
+					<form id="form">
+						<!-- <div class="form-group">
+							<label for="title">Title</label>
+							<input type="text" id="title" name="title" placeholder="Enter Blog Title" />
+							<span id="title_error" style="color: red;"></span>
+						</div>
+						<div class="form-group">
+							<label for="image">Image</label>
+							<input type="file" id="image" name="image" placeholder="Enter blog title" />
+							<span id="image_error" style="color: red;"></span>
+						</div>
+						<div class="form-group">
+							<label for="content">Blog Content</label>
+							<textarea name="content" id="content" cols="4" rows="4"></textarea>
+							<span id="content_error" style="color: red;"></span>
+							<script>
+								CKEDITOR.replace("content");
+							</script>
+						</div>
+						<button  id="saveButton" type="submit">SAVE</button> -->
+						<p type="file" id="image" name="image" placeholder="Enter blog title" />
+					</form>
+					
+					<table id="articleTable" style="margin-top: 10%;">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Image</th>
+								<th>Content</th>
+								<th>Actions</th> 
+							</tr>
+						</thead>
+						<tbody id="articleTableBody">
+							<!-- Table body will be populated dynamically -->
+						</tbody>
+					</table>
+					<!-- Add a modal for editing articles -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Edit Article</h2>
+    <form id="editForm">
+      <div class="form-group">
+        <label for="editTitle">Title</label>
+        <input type="text" id="editTitle" name="editTitle" placeholder="Enter Blog Title" />
+      </div>
+      <div class="form-group">
+        <label for="editImage">Image</label>
+        <input type="file" id="editImage" name="editImage" />
+      </div>
+      <div class="form-group">
+        <label for="editContent">Content</label>
+        <textarea id="editContent" name="editContent" cols="4" rows="4"></textarea>
+      </div>
+      <button type="button" id="saveEdit">Save</button>
+    </form>
+  </div>
+</div>
 
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-					<tr>
-						<td>Holy Claire</td>
-						<td>
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-							harum molest
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-					<tr>
-						<td>Moally Kabera</td>
-						<td>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-							enim? Necessitatibus.
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
+				</div>
 				
-				</table>
-			</section>
+		
+			
 		</div>
 	</body>
 	<script src="script.js"></script>
@@ -208,5 +187,9 @@
 		}
 		gtag("js", new Date());
 		gtag("config", "G-LLWL5N9CSM");
+	</script>
+	<script src="./adminValidation.js"></script>
+	<script>
+		
 	</script>
 </html>
