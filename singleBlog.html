@@ -23,11 +23,26 @@
             <h2>Comments</h2>
             <ul id="commentList"></ul>
             <form id="commentForm">
-                <input type="text" id="commentInput" placeholder="Add a comment">
-                <input type="text" id="usernameInput" placeholder="Your Username">
-                <input type="email" id="emailInput" placeholder="Your Email">
-                <input type="file" id="photoInput" accept="image/*" capture="user">
-                <button type="submit">Submit</button>
+                
+               <div class="form-control">
+								<input type="text" id="usernameInput" placeholder="Your Username">
+							 </div>
+                <div class="form-control">
+									<input type="email" id="emailInput" placeholder="Your Email">
+								</div>
+								<!-- <div class="form-control">
+									<input type="text" id="commentInput" placeholder="Add a comment">
+								</div> -->
+								<div class="form-control">
+									<textarea name="text" id="commentInput" cols="4" rows="4"></textarea>
+								</div>
+               <div class="form-control">
+								<input type="file" id="photoInput" accept="image/*" capture="user" width="300px" height="100px">
+							 </div>
+                <div class="form-control">
+									<button type="submit">Submit</button>
+									<button type="submit" class="home"><a href="./index.html">Back Home</a></button>
+								</div>
             </form>
         </div>
 		</div>

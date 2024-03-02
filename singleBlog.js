@@ -79,7 +79,7 @@ function displayComments() {
     // Retrieve comments from local storage or any other source
     // For now, let's assume comments are stored in an array with user details
     const comments = [
-        { comment: "Great post!", username: "User1", email: "user1@example.com", photo: null },
+        { comment: "Great post!", username: "Nancy", email: "nancy@@hgmail.com", photo: null },
         
         
     ];

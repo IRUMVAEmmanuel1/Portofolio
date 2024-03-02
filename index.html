@@ -22,6 +22,7 @@
 				font-family: Arial, sans-serif;
 				margin: 0;
 				padding: 0;
+				background-color: #f1f1f1;
 			}
 			section {
 				height: auto;
@@ -30,11 +31,17 @@
 				align-items: start;
 				background-color: #f1f1f1;
 			}
+			.sectionTitle h3{
+				font-size: 30px;
+				margin-left: 20px;
+				color: #2f8159;
+}
 			#work {
 				background-color: #f3f3f3;
 			}
 			#about {
 				background-color: #f1f1f1;
+				display: block;
 			}
 			#careers {
 				background-color: #ffffff;
@@ -54,9 +61,9 @@
 			<ul class="menu">
 				<li><a href="#work">Portofolio</a></li>
 				<li><a href="#about">Skills</a></li>
+				<li><a href="#contact">Blogs</a></li>
 				<li><a href="#careers">About me</a></li>
-				<li><a href="#about">Blogs</a></li>
-				<li><a href="#contact">Contact us</a></li>
+				<li><a href="#getTouch">Contact us</a></li>
         <li class="loginButton"><a href="../Login/login.html">Login</a></li>
 			</ul>
 		</header>
@@ -79,13 +86,20 @@
 				<div class="profileMe">
 					<img
 						src="../images/profile-pic-removebg (1) (1).png"
-						width="500px"
+						width="550px"
 						alt="profile" />
 				</div>
 			</div>
 		</section>
 		<section id="about">
+				
+			<div class="sectionTitle">
+				<h3>My Skills</h3>
+	
+		</div>
+	
 			<div class="wrapper">
+				
 				<div class="card">
 					<img src="../images/iconoir_design-nib.png" alt="" />
 					<p><b>UI/UX Design</b></p>
@@ -130,6 +144,8 @@
 		</section>
 
 		<section id="careers">
+			<div class="sectionTitle">
+				<h3>About me</h3>
       <div class="aboutMe">
 				<div class="aboutMeImage">
 					<img src="../images/2ndLogo.PNG" width="500px" height=auto alt="" />
@@ -142,12 +158,12 @@
     </section>
     
 		<section id="contact">
+			<div class="sectionTitle">
+				<h3>My Projects</h3>
 			<div class="carousel-container">
         <div class="carousel-slide"   id="articleCardsContainer">   
 					<div class="card1" ></div>       
           <div  class="card1">
-            
-            
 
             <div class="viewsLike">
               <div class="views">
