@@ -32,9 +32,15 @@
 }
 input[type="text"],textarea, input[type="email"],  input[type="file"]{
   border-radius: 5px;
-  padding: 15px 150px 10px 0px;
+
+  padding: 10px 150px 10px 0px;
   width: 15%;
   font-size: 15px;
+}
+input[type="text"],textarea, input[type="email"],  input[type="file"]::-moz-focus-inner{
+  border:solid 1px rgb(140, 238, 161) ;
+
+ 
 }
 
 #commentList{
@@ -48,6 +54,7 @@ input[type="text"],textarea, input[type="email"],  input[type="file"]{
   font-size: 15px;
   color: white;
   border-radius: 5px;
+  border: none;
  
 }
 
