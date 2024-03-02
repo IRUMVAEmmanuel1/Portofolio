@@ -314,6 +314,15 @@ tr:nth-child(even) {
 
 }
 
+@media screen and (max-width: 480px) {
+    
+table{
+  width: 100%;
+}
+.container{
+  width: 100%;
+}
+}
 
 @media only screen and (max-width: 768px) {
   
