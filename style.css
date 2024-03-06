@@ -172,7 +172,7 @@ body {
 .touch {
 	border-radius: 5px;
 	padding: 12px;
-	background-color: #2f8159;
+	background-color: #02b875;
 	color: white;
 	font-weight: bold;
 	border: none;
@@ -180,6 +180,10 @@ body {
 .touch a {
 	text-decoration: none;
 	color: white;
+}
+
+.touch a:hover{
+  font-size: 14px;
 }
 .upSkills,
 .blogPost,
