@@ -18,13 +18,32 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Initialize like count
-    let likeCount = 0;
+    let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
     document.getElementById("likeCount").textContent = likeCount;
+
+    // Check if user has already liked
+    let liked = localStorage.getItem('liked') === 'true';
+    if (liked) {
+        document.getElementById("likeButton").textContent = 'Unlike';
+    }
 
     // Handle like button click event
     document.getElementById("likeButton").addEventListener("click", function() {
-        likeCount++;
-        document.getElementById("likeCount").textContent = likeCount;
+        if (!liked) {
+            likeCount++;
+            localStorage.setItem('liked', 'true');
+            localStorage.setItem('likeCount', likeCount);
+            document.getElementById("likeCount").textContent = likeCount;
+            document.getElementById("likeButton").textContent = 'Unlike';
+            liked = true;
+        } else {
+            likeCount--;
+            localStorage.setItem('liked', 'false');
+            localStorage.setItem('likeCount', likeCount);
+            document.getElementById("likeCount").textContent = likeCount;
+            document.getElementById("likeButton").textContent = 'Like';
+            liked = false;
+        }
     });
 
     // Handle comment form submission
@@ -33,13 +52,11 @@ document.addEventListener("DOMContentLoaded", function() {
         const comment = document.getElementById("commentInput").value;
         const username = document.getElementById("usernameInput").value;
         const email = document.getElementById("emailInput").value;
-        const photo = document.getElementById("photoInput").files[0];
-        addComment(comment, username, email, photo);
+        addComment(comment, username, email);
         // Clear input fields after submission
         document.getElementById("commentInput").value = '';
         document.getElementById("usernameInput").value = '';
         document.getElementById("emailInput").value = '';
-        document.getElementById("photoInput").value = '';
     });
 
     // Display existing comments
@@ -47,20 +64,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Function to add a new comment
-function addComment(comment, username, email, photo) {
+function addComment(comment, username, email) {
     const commentList = document.getElementById("commentList");
     const li = document.createElement("li");
 
     // Create elements for user details
     const userDiv = document.createElement("div");
     userDiv.classList.add("user-details");
-    if (photo) {
-        const photoURL = URL.createObjectURL(photo);
-        const img = document.createElement("img");
-        img.src = photoURL;
-        img.alt = "User Photo";
-        userDiv.appendChild(img);
-    }
     const usernameSpan = document.createElement("span");
     usernameSpan.textContent = username;
     userDiv.appendChild(usernameSpan);
@@ -79,12 +89,12 @@ function displayComments() {
     // Retrieve comments from local storage or any other source
     // For now, let's assume comments are stored in an array with user details
     const comments = [
-        { comment: "Great post!", username: "Nancy", email: "nancy@@hgmail.com", photo: null },
-        
-        
+        { comment: "Great post!", username: "Nancy", email: "nancy@example.com" }
     ];
     const commentList = document.getElementById("commentList");
     comments.forEach(commentData => {
-        addComment(commentData.comment, commentData.username, commentData.email, commentData.photo);
+        addComment(commentData.comment, commentData.username, commentData.email);
     });
 }
+
+
