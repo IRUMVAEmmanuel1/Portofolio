@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (blog) {
         document.getElementById("blogTitle").textContent = blog.title;
         document.getElementById("blogImage").src = blog.image;
-        document.getElementById("blogContent").textContent = blog.content;
+        // Remove <p> tags and insert the blog content
+        document.getElementById("blogContent").innerHTML = blog.content;
     } else {
         // Display an error message if the blog is not found
         document.getElementById("blogContent").textContent = "Blog not found";
@@ -89,12 +90,10 @@ function displayComments() {
     // Retrieve comments from local storage or any other source
     // For now, let's assume comments are stored in an array with user details
     const comments = [
-        { comment: "Great post!", username: "Nancy", email: "nancy@example.com" }
+        { comment: "Great post!", username: "Nancy", email: "nancy@gmail.com" }
     ];
     const commentList = document.getElementById("commentList");
     comments.forEach(commentData => {
         addComment(commentData.comment, commentData.username, commentData.email);
     });
 }
-
-
