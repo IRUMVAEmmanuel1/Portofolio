@@ -12,6 +12,9 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
 			rel="stylesheet" />
+      <script>
+        location.reload;
+        </script>
 		<title>EI Portofolio</title>
 		<link rel="stylesheet" href="style.css" />
 		<style>
@@ -19,6 +22,7 @@
 				font-family: Arial, sans-serif;
 				margin: 0;
 				padding: 0;
+				background-color: #f1f1f1;
 			}
 			section {
 				height: auto;
@@ -27,11 +31,17 @@
 				align-items: start;
 				background-color: #f1f1f1;
 			}
+			.sectionTitle h3{
+				font-size: 30px;
+				margin-left: 20px;
+				color: #2f8159;
+}
 			#work {
 				background-color: #f3f3f3;
 			}
 			#about {
 				background-color: #f1f1f1;
+				display: block;
 			}
 			#careers {
 				background-color: #ffffff;
@@ -51,8 +61,9 @@
 			<ul class="menu">
 				<li><a href="#work">Portofolio</a></li>
 				<li><a href="#about">Skills</a></li>
+				<li><a href="#contact">Blogs</a></li>
 				<li><a href="#careers">About me</a></li>
-				<li><a href="#contact">Contact us</a></li>
+				<li><a href="#getTouch">Contact us</a></li>
         <li class="loginButton"><a href="../Login/login.html">Login</a></li>
 			</ul>
 		</header>
@@ -75,13 +86,20 @@
 				<div class="profileMe">
 					<img
 						src="../images/profile-pic-removebg (1) (1).png"
-						width="500px"
+						width="550px"
 						alt="profile" />
 				</div>
 			</div>
 		</section>
 		<section id="about">
+				
+			<div class="sectionTitle">
+				<h3>My Skills</h3>
+	
+		</div>
+	
 			<div class="wrapper">
+				
 				<div class="card">
 					<img src="../images/iconoir_design-nib.png" alt="" />
 					<p><b>UI/UX Design</b></p>
@@ -126,6 +144,8 @@
 		</section>
 
 		<section id="careers">
+			<div class="sectionTitle">
+				<h3>About me</h3>
       <div class="aboutMe">
 				<div class="aboutMeImage">
 					<img src="../images/2ndLogo.PNG" width="500px" height=auto alt="" />
@@ -138,60 +158,13 @@
     </section>
     
 		<section id="contact">
+			<div class="sectionTitle">
+				<h3>My Projects</h3>
 			<div class="carousel-container">
-        <div class="carousel-slide">
-          <div class="card1">
-            
-							<img src="../images/pexels-august-de-richelieu-4427611.jpg" alt="" />
-							<p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
-							<p><b>Shora Neza Farmers Monitoring System</b></p>
-							<p>
-								Clean, modern designs - optimized for performance, search engines,search engines,and converting users to customers.and converting users to customers.
-							</p>
-							
-							<div class="viewsLike">
-								<div class="views">
-									<p class="number">22&nbsp;<span class="allSpan">Views</span></p>
-									</div>
-								<div class="likes">
-									<p class="number"><span>Like</span> &nbsp;<span class="allSpan">28</span></p>
+        <div class="carousel-slide"   id="articleCardsContainer">   
+					<div class="card1" ></div>       
+          <div  class="card1">
 
-									</div>
-								<div class="readMore"><button class="readMoreButton"> <a href="../singleBlog/single.html">Read More</a> </button></div>
-							</div>
-
-          </div>
-          <div class="card1">
-            
-                <img src="../images/pexels-fauxels-3183197.jpg" alt="" />
-                <p class="time">01,Dec,2020 <span>| WEBINAR</span></p>
-                <p><b>Shora Neza Farmers Monitoring System</b></p>
-                <p>
-                  Clean, modern designs - optimized for performance, search engines,search engines,and converting users to customers.and converting users to customers.
-                </p>
-                
-                <div class="viewsLike">
-                  <div class="views">
-                    <p class="number">12&nbsp;<span class="allSpan">Views</span></p>
-                    </div>
-                  <div class="likes">
-                    <p class="number"><span>Like</span> &nbsp;<span class="allSpan">87</span></p>
-  
-                    </div>
-                  <div class="readMore"><button class="readMoreButton"> <a href="../singleBlog/single.html">Read More</a> </button></div>
-                
-  
-            </div>
-          </div>
-          
-          <div class="card1">
-            
-            <img src="../images/pexels-mikhail-nilov-9301257.jpg" alt="" />
-            <p class="time">21,Feb,2024 <span>| WEBINAR</span></p>
-            <p><b>Shora Neza Farmers Monitoring System</b></p>
-            <p>
-              Clean, modern designs - optimized for performance, search engines,search engines,and converting users to customers.and converting users to 
-            </p>
             <div class="viewsLike">
               <div class="views">
                 <p class="number">54&nbsp;<span class="allSpan">Views</span></p>
@@ -200,8 +173,8 @@
                 <p class="number"><span>Like</span> &nbsp;<span class="allSpan">45</span></p>
 
                 </div>
-              <div class="readMore"><button class="readMoreButton"> <a href="./singleBlog/single.html">Read More</a> </button></div>
-            
+              
+                <div class="readMore"><button class="readMoreButton"> <a href="./singleBlog/single.html">Read More</a> </button></div>
 
         </div>
       </div>
@@ -209,7 +182,7 @@
             
         <img src="../images/pixels/pexels-realtoughcandycom-11035467.jpg" alt="" />
         <p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
-        <p><b>Shora Neza Farmers Monitoring System</b></p>
+        
         <p>
           Clean, modern designs - optimized for performance, search engines,
           and converting users to customers.
@@ -231,8 +204,8 @@
   <div class="card1">
             
     <img src="../images/pexels-fauxels-3183197.jpg" alt="" />
-    <p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
-    <p><b>Shora Neza Farmers Monitoring System</b></p>
+    <p class="time">31,Jan,2023 <span>| WEB </span></p>
+   
     <p>
       Clean, modern designs - optimized for performance, search engines,
       and converting users to customers.
@@ -254,22 +227,34 @@
             
   <img src="../images/pexels-august-de-richelieu-4427611.jpg" alt="" />
   <p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
-  <p><b>Shora Neza Farmers Monitoring System</b></p>
+ 
   <p>
     Clean, modern designs - optimized for performance, search engines,
     and converting users to customers.
   </p>
-  <div class="viewsLike">
-    <div class="views">
-      <p class="number">12&nbsp;<span class="allSpan">Views</span></p>
-      </div>
-    <div class="likes">
-      <p class="number"><span>Like</span> &nbsp;<span class="allSpan">45</span></p>
-
-      </div>
-    <div class="readMore"><button class="readMoreButton"> <a href="./singleBlog/single.html">Read More</a> </button></div>
-
+  
 </div>
+<div class="card1">
+            
+  <img src="../images/pexels-august-de-richelieu-4427611.jpg" alt="" />
+  <p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
+ 
+  <p>
+    Clean, modern designs - optimized for performance, search engines,
+    and converting users to customers.
+  </p>
+  
+</div>
+<div class="card1">
+            
+  <img src="../images/pexels-august-de-richelieu-4427611.jpg" alt="" />
+  <p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
+ 
+  <p>
+    Clean, modern designs - optimized for performance, search engines,
+    and converting users to customers.
+  </p>
+  
 </div>
     
           <!-- Add more cards here if needed -->
@@ -335,5 +320,6 @@
       </footer>
     </section>
     <script src="../slide/slide.js"></script>
+    <script src="cards.js"></script>
 	</body>
 </html>

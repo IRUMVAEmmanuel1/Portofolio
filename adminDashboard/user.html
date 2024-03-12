@@ -17,6 +17,7 @@
 			src="https://kit.fontawesome.com/48bcbf2c30.js"
 			crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="style.css" />
+		<script src="../Register/reguser.js"></script>
 		<title>Admin Dashboard</title>
 	</head>
 	<body>
@@ -26,18 +27,14 @@
 					<li>
 						<div class="menu-container">
 							<button class="icon" id="menu">
-								<a href="./index.html">
-                  <img src="./assets/images/menu.svg" alt="menu" />
-                </a>
+								<img src="./assets/images/menu.svg" alt="menu" />
 							</button>
 						</div>
 					</li>
 
 					<li>
 						<button class="icon" id="dashboard">
-							<a href="./index.html">
-                <img src="./assets/images/grid.svg" alt="dashboard" />
-              </a>
+							<img src="./assets/images/grid.svg" alt="dashboard" />
 						</button>
 					</li>
 					<li>
@@ -50,8 +47,8 @@
 						</button>
 					</li>
 					<li>
-						<button class="icon" id="clients">
-							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
+						<button class="icon" id="settings">
+							<a href="./allBlogs.html"><img src="../adminDashboard/assets/images/email-removebg-preview.png" alt="settings" /></a>
 						</button>
 					</li>
 					<li>
@@ -59,89 +56,53 @@
 							<a href="./message.html">
                 <img
 								src="./assets/images/news-removebg-preview.png"
-								alt="message" />
+								alt="allBlogs" />
               </a>
 						</button>
 					</li>
 					<li>
-						<button class="icon" id="settings">
-							<img src="./assets/images/settings.svg" alt="settings" />
+						<button class="icon" id="clients">
+							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
 						</button>
 					</li>
+					<!-- <li>
+						<button class="icon" id="vets">
+							<a href="./message.html">
+                <img
+								src="./assets/images/news-removebg-preview.png"
+								alt="message" />
+              </a>
+						</button>
+					</li> -->
+
+					
 				</ul>
 				<div class="logout-container">
 					<button class="icon-logout">
-						<img src="./assets/images/log-out.svg" alt="logout" />
+						<a href="../index.html">
+							<img src="./assets/images/log-out.svg" alt="logout" />
+						</a>
 					</button>
 				</div>
 			</aside>
 			<section class="main">
 				<h2>All Users</h2>
-				<table>
-					<tr>
-						<th>Username</th>
-						<th>gmail</th>
-						<th>Profile</th>
-            <th>Password</th>
-						<th>Action</th>
-					</tr>
-					<tr>
-						<td>Geome Ntwari</td>
-						<td>
-							kalisat@gmail.com
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-            <td>********</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-          <tr>
-						<td>kalisa</td>
-						<td>
-							rwgeome@gmail.com
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-            <td>****</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
-          <tr>
-						<td>Eric Kaul</td>
-						<td>
-							erickaw@gmail.com
-						</td>
-						<td>
-							<img
-								src="../images/profile-pic-removebg (1) (1).png"
-								alt=""
-								width="42px"
-								height="42px" />
-						</td>
-            <td>******</td>
-						<td>
-							<i class="fa fa-edit" aria-hidden="true"></i>
-							<i class="fa fa-trash-o" aria-hidden="true"></i>
-						</td>
-					</tr>
+				<table id="userTable">
+					<thead>
+						<tr>
+							<th>Username</th>
+							<th>Email</th>
+							<th>Password</th>
+						</tr>
+					</thead>
+					<tbody id="userTableBody">
+						<!-- Users will be displayed here -->
+					</tbody>
 				</table>
+				
 			</section>
 		</div>
+		
 	</body>
 	<script src="script.js"></script>
 	<script>

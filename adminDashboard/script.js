@@ -77,14 +77,6 @@ const openMenu = () => {
   menu_logo.style.height = "45px"
   menu_container.style.paddingLeft = "15px";
   menu_container.insertBefore(menu_logo, menu_container.childNodes[0]);
-
-  // let p_search = document.createElement("p");
-  // p_search.id = "p-search";
-  // p_search.innerHTML = "Search";
-  // search.style.width = "220px";
-  // search.style.justifyContent = "left";
-  // search.appendChild(p_search);
-
   let p_dash = document.createElement("p");
   p_dash.id = "p-dashboard";
   p_dash.innerHTML = "Dashboard";
@@ -115,7 +107,7 @@ const openMenu = () => {
 
   let p_settings = document.createElement("p");
   p_settings.id = "p-settings";
-  p_settings.innerHTML = "Settings";
+  p_settings.innerHTML = "All Articles";
   settings.style.width = "220px";
   settings.style.justifyContent = "left";
   settings.appendChild(p_settings);

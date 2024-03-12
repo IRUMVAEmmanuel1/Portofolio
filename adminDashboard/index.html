@@ -17,6 +17,9 @@
 		<script
 			src="https://kit.fontawesome.com/48bcbf2c30.js"
 			crossorigin="anonymous"></script>
+			<script>
+        location.reload;
+        </script>
 		<title>Admin Dashboard</title>
 	</head>
 	<body>
@@ -46,8 +49,8 @@
 						</button>
 					</li>
 					<li>
-						<button class="icon" id="clients">
-							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
+						<button class="icon" id="settings">
+							<a href="./allBlogs.html"><img src="../adminDashboard/assets/images/email-removebg-preview.png" alt="settings" /></a>
 						</button>
 					</li>
 					<li>
@@ -55,19 +58,32 @@
 							<a href="./message.html">
                 <img
 								src="./assets/images/news-removebg-preview.png"
-								alt="message" />
+								alt="allBlogs" />
               </a>
 						</button>
 					</li>
 					<li>
-						<button class="icon" id="settings">
-							<img src="./assets/images/settings.svg" alt="settings" />
+						<button class="icon" id="clients">
+							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
 						</button>
 					</li>
+					<!-- <li>
+						<button class="icon" id="vets">
+							<a href="./message.html">
+                <img
+								src="./assets/images/news-removebg-preview.png"
+								alt="message" />
+              </a>
+						</button>
+					</li> -->
+
+					
 				</ul>
 				<div class="logout-container">
 					<button class="icon-logout">
-						<img src="./assets/images/log-out.svg" alt="logout" />
+						<a href="../index.html">
+							<img src="./assets/images/log-out.svg" alt="logout" />
+						</a>
 					</button>
 				</div>
 			</aside>
@@ -77,7 +93,7 @@
 					<div class="card">
 						<i class="fas fa-comments"></i>
 						<h3>Comments</h3>
-						<p>100</p>
+						<p>410</p>
 					</div>
 					<div class="card">
 						<i class="fas fa-thumbs-up"></i>
@@ -87,16 +103,18 @@
 					<div class="card">
 						<i class="fas fa-book"></i>
 						<h3>Articles</h3>
-						<p>50</p>
+						<p class="card-text" id="articleCount">10</p>
 					</div>
 					<div class="card">
 						<i class="fas fa-users"></i>
 						<h3>Users</h3>
 						<p>152</p>
 					</div>
+					
 				</div>
 			</section>
 		</div>
+		<script src="./adminValidation.js"></script>
 	</body>
 	<script src="script.js"></script>
 	<script>

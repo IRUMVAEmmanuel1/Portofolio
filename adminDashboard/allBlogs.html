@@ -31,10 +31,11 @@
 							</button>
 						</div>
 					</li>
-
 					<li>
 						<button class="icon" id="dashboard">
-							<img src="./assets/images/grid.svg" alt="dashboard" />
+							<a href="./index.html">
+								<img src="./assets/images/grid.svg" alt="dashboard" />
+							</a>
 						</button>
 					</li>
 					<li>
@@ -87,9 +88,9 @@
 			</aside>
 			<section class="main">
 				<div class="formContainer" id="form">
-					<h2>Add blog</h2>
+					<h2>All Articles</h2>
 					<form id="form">
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="title">Title</label>
 							<input type="text" id="title" name="title" placeholder="Enter Blog Title" />
 							<span id="title_error" style="color: red;"></span>
@@ -107,9 +108,48 @@
 								CKEDITOR.replace("content");
 							</script>
 						</div>
-						<button  id="saveButton" type="submit">SAVE</button>
+						<button  id="saveButton" type="submit">SAVE</button> -->
+						<p type="file" id="image" name="image" placeholder="Enter blog title" />
 					</form>
+					
+					<table id="articleTable" style="margin-top: 10%;">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Image</th>
+								<th>Content</th>
+								<th>Actions</th> 
+							</tr>
+						</thead>
+						<tbody id="articleTableBody">
+							<!-- Table body will be populated dynamically -->
+						</tbody>
+					</table>
+					<!-- Add a modal for editing articles -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Edit Article</h2>
+    <form id="editForm">
+      <div class="form-group">
+        <label for="editTitle">Title</label>
+        <input type="text" id="editTitle" name="editTitle" placeholder="Enter Blog Title" />
+      </div>
+      <div class="form-group">
+        <label for="editImage">Image</label>
+        <input type="file" id="editImage" name="editImage" />
+      </div>
+      <div class="form-group">
+        <label for="editContent">Content</label>
+        <textarea id="editContent" name="editContent" cols="4" rows="4"></textarea>
+      </div>
+      <button type="button" id="saveEdit">Save</button>
+    </form>
+  </div>
+</div>
+				</div>
 				
+		</div>
 	</body>
 	<script src="script.js"></script>
 	<script>

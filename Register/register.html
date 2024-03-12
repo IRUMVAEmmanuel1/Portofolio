@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Register</title>
-    
-    <link rel="stylesheet" href="../Login/login.css">
-	</head>
-	<body>
-		<div class="formContainer">
-			<h2>Register Form</h2>
-			<form id="contact-form">
-				<div class="form-group">
-					<label for="name">User name:</label>
-					<input type="text" id="name" name="name" required placeholder="Enter your username ">
-				</div>
-				<div class="form-group">
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" required placeholder="Enter your email">
-				</div>
-				<div class="form-group">
-					<label for="password">Password:</label>
-					<input type="password" id="email" name="email" required placeholder="Enter your password">
-				</div>
-				<div class="Thome">
-					<p class="HomeH"><a href="../index.html">Home</a></p>
-					<p class="registerP">Back to <span class="realR"> <a href="../Login/login.html">Login</a> </span></p>
-				</div>
-				<button type="submit">Register</button>
-			</form>
-			
-		</div>
-	</body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
+rel="stylesheet" />
+<link rel="stylesheet" href="login.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+rel="stylesheet" />
+<script src="./login.js"></script>
+<link rel="stylesheet" href="../Login/login.css">
+
+</head>
+<body>
+
+<div class="formContainer">
+<h2>Registration Form</h2>
+<form class="form" id="form">
+    <div class="form-group">
+      <label for="fname">Username</label>
+      <input type="text" id="fname" placeholder="Enter your username" />
+      <span id="name_error" style="color: red;"></span>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" placeholder="Enter your email" />
+      <span id="email_error" style="color: red;"></span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password" />
+      <span id="password_error" style="color: red;"></span>
+    </div>
+    <div class="Thome">
+        <p class="HomeH"><a href="../index.html">Home</a></p>
+        <p class="registerP">Back to <span class="realR"> <a href="../Login/login.html">Login</a> </span></p>
+    </div>
+    <button type="submit" class="submit">Register</button>
+  </form>
+  
+ 
+  
+  
+</div>
+<script src="./reguser.js"></script>
+</body>
 </html>

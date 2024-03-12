@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Single Blog</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="SingleBlog.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1 id="blogTitle"></h1>
+			<img id="blogImage" src="" alt="Blog Image" width="1100px" height="500px"/>
+			<p id="blogContent"></p>
+			<div id="likeSection">
+				<button id="likeButton">Like</button>
+				<span id="likeCount">0</span> Likes
+			</div>
+		
+					
+					<!-- Comment Section -->
+          <div id="commentSection">
+            <h2>Comments</h2>
+            <ul id="commentList"></ul>
+            <form id="commentForm">
+                
+               <div class="form-control">
+								<input type="text" id="usernameInput" placeholder="Your Username">
+							 </div>
+                <div class="form-control">
+									<input type="email" id="emailInput" placeholder="Your Email">
+								</div>
+								<!-- <div class="form-control">
+									<input type="text" id="commentInput" placeholder="Add a comment">
+								</div> -->
+								<div class="form-control">
+									<textarea name="text" id="commentInput" cols="4" rows="4"></textarea>
+								</div>
+               <!-- <div class="form-control">
+								<input type="file" id="photoInput" accept="image/*" capture="user" width="300px" height="100px">
+							 </div> -->
+                <div class="form-control">
+									<button type="submit">Submit</button>
+									<button type="submit" class="home"><a href="./index.html">Back Home</a></button>
+								</div>
+            </form>
+        </div>
+		</div>
+		<script src="singleBlog.js"></script>
+	</body>
+</html>
