@@ -1,141 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://www.cssscript.com/demo/sticky.css"
-			rel="stylesheet"
-			type="text/css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-			rel="stylesheet" />
-		<script
-			src="https://kit.fontawesome.com/48bcbf2c30.js"
-			crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="style.css" />
-		<script src="../Register/reguser.js"></script>
-		<title>Admin Dashboard</title>
-	</head>
-	<body>
-		<div class="container">
-			<aside class="sidebar">
-				<ul class="menu-list">
-					<li>
-						<div class="menu-container">
-							<button class="icon" id="menu">
-								<img src="./assets/images/menu.svg" alt="menu" />
-							</button>
-						</div>
-					</li>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://www.cssscript.com/demo/sticky.css"
+rel="stylesheet"
+type="text/css" />
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+rel="stylesheet" />
+<script
+src="https://kit.fontawesome.com/48bcbf2c30.js"
+crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css" />
+<title>Admin Dashboard</title>
+</head>
+<body>
+<div class="container">
+<aside class="sidebar">
+<ul class="menu-list">
+<li>
+<div class="menu-container">
+<button class="icon" id="menu">
+<img src="./assets/images/menu.svg" alt="menu" />
+</button>
+</div>
+</li>
 
-					<li>
-						<button class="icon" id="dashboard">
-							<img src="./assets/images/grid.svg" alt="dashboard" />
-						</button>
-					</li>
-					<li>
-						<button class="icon" id="article">
-							<a href="./article.html"
-								><img
-									src="./assets/images/email-removebg-preview.png"
-									alt="article"
-							/></a>
-						</button>
-					</li>
-					<li>
-						<button class="icon" id="settings">
-							<a href="./allBlogs.html"><img src="../adminDashboard/assets/images/email-removebg-preview.png" alt="settings" /></a>
-						</button>
-					</li>
-					<li>
-						<button class="icon" id="vets">
-							<a href="./message.html">
-                <img
-								src="./assets/images/news-removebg-preview.png"
-								alt="allBlogs" />
-              </a>
-						</button>
-					</li>
-					<li>
-						<button class="icon" id="clients">
-							<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
-						</button>
-					</li>
-					<!-- <li>
-						<button class="icon" id="vets">
-							<a href="./message.html">
-                <img
-								src="./assets/images/news-removebg-preview.png"
-								alt="message" />
-              </a>
-						</button>
-					</li> -->
+<li>
+<button class="icon" id="dashboard">
+<img src="./assets/images/grid.svg" alt="dashboard" />
+</button>
+</li>
+<li>
+<button class="icon" id="article">
+<a href="./article.html"
+><img
+src="./assets/images/email-removebg-preview.png"
+alt="article"
+/></a>
+</button>
+</li>
+<li>
+<button class="icon" id="settings">
+<a href="./allBlogs.html"><img src="../adminDashboard/assets/images/email-removebg-preview.png" alt="settings" /></a>
+</button>
+</li>
+<li>
+<button class="icon" id="vets">
+<a href="./message.html">
+<img
+src="./assets/images/news-removebg-preview.png"
+alt="allBlogs" />
+</a>
+</button>
+</li>
+<li>
+<button class="icon" id="clients">
+<a href="./user.html"><img src="./assets/images/user.svg" alt="clients" /></a>
+</button>
+</li>
+<!-- <li>
+<button class="icon" id="vets">
+<a href="./message.html">
+<img
+src="./assets/images/news-removebg-preview.png"
+alt="message" />
+</a>
+</button>
+</li> -->
 
-					
-				</ul>
-				<div class="logout-container">
-					<button class="icon-logout">
-						<a href="../index.html">
-							<img src="./assets/images/log-out.svg" alt="logout" />
-						</a>
-					</button>
-				</div>
-			</aside>
-			<section class="main">
-				<h2>All Users</h2>
-				<table id="userTable">
-					<thead>
-						<tr>
-							<th>Username</th>
-							<th>Email</th>
-							<th>Password</th>
-						</tr>
-					</thead>
-					<tbody id="userTableBody">
-						<!-- Users will be displayed here -->
-					</tbody>
-				</table>
-				
-			</section>
-		</div>
-		
-	</body>
-	<script src="script.js"></script>
-	<script>
-		try {
-			fetch(
-				new Request(
-					"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
-					{ method: "HEAD", mode: "no-cors" }
-				)
-			)
-				.then(function (response) {
-					return true;
-				})
-				.catch(function (e) {
-					var carbonScript = document.createElement("script");
-					carbonScript.src =
-						"//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
-					carbonScript.id = "_carbonads_js";
-					document.getElementById("carbon-block").appendChild(carbonScript);
-				});
-		} catch (error) {
-			console.log(error);
-		}
-	</script>
-	<script
-		async
-		src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag("js", new Date());
-		gtag("config", "G-LLWL5N9CSM");
-	</script>
+
+</ul>
+<div class="logout-container">
+<button class="icon-logout">
+<a href="../index.html">
+<img src="./assets/images/log-out.svg" alt="logout" />
+</a>
+</button>
+</div>
+</aside>
+<section class="main">
+<h2>All Users</h2>
+<table id="userTable">
+<thead>
+<tr>
+<th>Username</th>
+<th>Email</th>
+<th>Password</th>
+</tr>
+</thead>
+<tbody id="userTableBody">
+<!-- Users will be displayed here -->
+</tbody>
+</table>
+
+</section>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const userTableBody = document.getElementById("userTableBody");
+
+  fetch('https://mybrand-bcke.onrender.com/api/v1/users')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Fetched user data:', data);
+      // Populate the table with user data
+      populateUserTable(data);
+    })
+    .catch(error => {
+      console.error('Error fetching user data:', error);
+    });
+
+  function populateUserTable(userData) {
+    userTableBody.innerHTML = ""; // Clear existing content
+
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${userData.username}</td>
+      <td>${userData.email}</td>
+      <td>${userData.password}</td>
+    `;
+    userTableBody.appendChild(row);
+  }
+});
+</script>
+</body>
 </html>

@@ -12,9 +12,7 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
 			rel="stylesheet" />
-      <script>
-        location.reload;
-        </script>
+      
 		<title>EI Portofolio</title>
 		<link rel="stylesheet" href="style.css" />
 		<style>
@@ -35,7 +33,11 @@
 				font-size: 30px;
 				margin-left: 20px;
 				color: #2f8159;
-}
+			}
+			.loader{
+				margin-left: 30rem;		
+				}
+
 			#work {
 				background-color: #f3f3f3;
 			}
@@ -67,7 +69,6 @@
         <li class="loginButton"><a href="../Login/login.html">Login</a></li>
 			</ul>
 		</header>
-
 		<section id="work">
 			<div class="myProfile">
 				<div class="describeMe">
@@ -160,12 +161,18 @@
 		<section id="contact">
 			<div class="sectionTitle">
 				<h3>My Projects</h3>
+				<div id="loader" class="loader"></div> 
 			<div class="carousel-container">
-        <div class="carousel-slide"   id="articleCardsContainer">   
-					<div class="card1" ></div>       
-          <div  class="card1">
-
-            <div class="viewsLike">
+        <div class="carousel-slide"   id="articleCardsContainer">  
+					
+					<div class="card1" >      
+						
+						
+						<div id="articleCardsContainer" id="card1" style="display: none;">
+							<!-- Article cards will be displayed here -->
+						</div>
+						</script>
+            <!-- <div class="viewsLike">
               <div class="views">
                 <p class="number">54&nbsp;<span class="allSpan">Views</span></p>
                 </div>
@@ -176,9 +183,9 @@
               
                 <div class="readMore"><button class="readMoreButton"> <a href="./singleBlog/single.html">Read More</a> </button></div>
 
-        </div>
+        </div> -->
       </div>
-      <div class="card1">
+      <!-- <div class="card1">
             
        
         
@@ -196,8 +203,8 @@
         
 
     </div>
-  </div>
-  <div class="card1">
+  </div> -->
+  <!-- <div class="card1">
             
   
    
@@ -214,8 +221,8 @@
     
 
 </div>
-</div>
-<div class="card1">
+</div> -->
+<!-- <div class="card1">
             
 
   
@@ -228,7 +235,7 @@
 <div class="card1">
             
   
-</div>
+</div> -->
     
           <!-- Add more cards here if needed -->
         </div>
@@ -293,6 +300,8 @@
       </footer>
     </section>
     <script src="../slide/slide.js"></script>
-    <script src="cards.js"></script>
+		<script src="scripts.js"></script>
+    <!-- <script src="cards.js"></script> -->
+		
 	</body>
 </html>
