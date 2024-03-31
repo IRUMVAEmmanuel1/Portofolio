@@ -6,16 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-href="https://www.cssscript.com/demo/sticky.css"
-rel="stylesheet"
-type="text/css" />
-<link
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-rel="stylesheet" />
-<script
-src="https://kit.fontawesome.com/48bcbf2c30.js"
-crossorigin="anonymous"></script>
+<link href="https://www.cssscript.com/demo/sticky.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/48bcbf2c30.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css" />
 <title>Admin Dashboard</title>
 </head>
@@ -30,7 +23,6 @@ crossorigin="anonymous"></script>
 </button>
 </div>
 </li>
-
 <li>
 <button class="icon" id="dashboard">
 <img src="./assets/images/grid.svg" alt="dashboard" />
@@ -38,11 +30,7 @@ crossorigin="anonymous"></script>
 </li>
 <li>
 <button class="icon" id="article">
-<a href="./article.html"
-><img
-src="./assets/images/email-removebg-preview.png"
-alt="article"
-/></a>
+<a href="./article.html"><img src="./assets/images/email-removebg-preview.png" alt="article" /></a>
 </button>
 </li>
 <li>
@@ -52,11 +40,7 @@ alt="article"
 </li>
 <li>
 <button class="icon" id="vets">
-<a href="./message.html">
-<img
-src="./assets/images/news-removebg-preview.png"
-alt="allBlogs" />
-</a>
+<a href="./message.html"><img src="./assets/images/news-removebg-preview.png" alt="allBlogs" /></a>
 </button>
 </li>
 <li>
@@ -66,15 +50,9 @@ alt="allBlogs" />
 </li>
 <!-- <li>
 <button class="icon" id="vets">
-<a href="./message.html">
-<img
-src="./assets/images/news-removebg-preview.png"
-alt="message" />
-</a>
+<a href="./message.html"><img src="./assets/images/news-removebg-preview.png" alt="message" /></a>
 </button>
 </li> -->
-
-
 </ul>
 <div class="logout-container">
 <button class="icon-logout">
@@ -114,23 +92,28 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     .then(data => {
       console.log('Fetched user data:', data);
+      // Check if the response has a "message" property containing an array of users
+      const users = data.message || [];
       // Populate the table with user data
-      populateUserTable(data);
+      populateUserTable(users);
     })
     .catch(error => {
       console.error('Error fetching user data:', error);
     });
 
-  function populateUserTable(userData) {
+  function populateUserTable(users) {
     userTableBody.innerHTML = ""; // Clear existing content
 
-    const row = document.createElement("tr");
-    row.innerHTML = `
-      <td>${userData.username}</td>
-      <td>${userData.email}</td>
-      <td>${userData.password}</td>
-    `;
-    userTableBody.appendChild(row);
+    // Loop through each user and populate the table
+    users.forEach(user => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${user.username}</td>
+        <td>${user.email}</td>
+        <td>${user.password}</td>
+      `;
+      userTableBody.appendChild(row);
+    });
   }
 });
 </script>
