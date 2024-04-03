@@ -10,7 +10,7 @@ const password_error = document.getElementById("password_error");
 form.addEventListener("submit", (e) => {
 	if (fname.value === "" || fname.value == null) {
 		e.preventDefault();
-		name_error.innerHTML = "Name is required";
+		name_error.innerHTML = "Name or email is required";
 	} else {
 		name_error.innerHTML = "";
 	}

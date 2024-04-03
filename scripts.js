@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loader.style.display = "block"; // Show loader
 
-    fetch('https://mybrand-bcke.onrender.com/api/blogs')
+    fetch('http://localhost:5000/api/blogs')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     loader.style.display = "block"; // Show loader
 
-    fetch('https://mybrand-bcke.onrender.com/api/blogs')
+    fetch('http://localhost:5000/api/blogs')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

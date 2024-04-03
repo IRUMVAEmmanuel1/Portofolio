@@ -1,74 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/216e505ef8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./slide/slide.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>EI Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+		<script src="activeUser.js"></script>
+    <script></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        section {
+            height: auto;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            background-color: #f1f1f1;
+        }
+        .sectionTitle h3 {
+            font-size: 30px;
+            margin-left: 20px;
+            color: #2f8159;
+        }
+        .loader {
+            margin-left: 30rem;
+        }
+        #work {
+            background-color: #f3f3f3;
+        }
+        #about {
+            background-color: #f1f1f1;
+            display: block;
+        }
+        #careers {
+            background-color: #ffffff;
+        }
+        #contact {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
-		<link
-			rel="stylesheet"
-			href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-			rel="stylesheet" />
-      
-		<title>EI Portofolio</title>
-		<link rel="stylesheet" href="style.css" />
-		<style>
-			body {
-				font-family: Arial, sans-serif;
-				margin: 0;
-				padding: 0;
-				background-color: #f1f1f1;
-			}
-			section {
-				height: auto;
-				display: flex;
-				justify-content: start;
-				align-items: start;
-				background-color: #f1f1f1;
-			}
-			.sectionTitle h3{
-				font-size: 30px;
-				margin-left: 20px;
-				color: #2f8159;
-			}
-			.loader{
-				margin-left: 30rem;		
-				}
+<body>
+  <header class="header">
+    <a href="#" class="logo"><img src="../images/MineLogo-removebg-preview.png" alt=""></a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li><a href="#work">Portofolio</a></li>
+        <li><a href="#about">Skills</a></li>
+        <li><a href="#contact">Blogs</a></li>
+        <li><a href="#careers">About me</a></li>
+        <li><a href="#getTouch">Contact us</a></li>
+        <li id="username" style="display: none;"></li> <!-- Hidden by default -->
+        <li id="logoutButton" style="display: none;"><a href="#">Logout</a></li> <!-- Hidden by default -->
+        <li id="loginButton"><a href="../Login/login.html">Login</a></li>
+    </ul>
+</header>
 
-			#work {
-				background-color: #f3f3f3;
-			}
-			#about {
-				background-color: #f1f1f1;
-				display: block;
-			}
-			#careers {
-				background-color: #ffffff;
-			}
-			#contact {
-				background-color: #f1f1f1;
-			}
-		</style>
-	</head>
-	<body>
-		<header class="header">
-			<a href="#" class="logo"><img src="../images/MineLogo-removebg-preview.png" alt=""></a>
-			<input class="menu-btn" type="checkbox" id="menu-btn" />
-			<label class="menu-icon" for="menu-btn"
-				><span class="navicon"></span
-			></label>
-			<ul class="menu">
-				<li><a href="#work">Portofolio</a></li>
-				<li><a href="#about">Skills</a></li>
-				<li><a href="#contact">Blogs</a></li>
-				<li><a href="#careers">About me</a></li>
-				<li><a href="#getTouch">Contact us</a></li>
-        <li class="loginButton"><a href="../Login/login.html">Login</a></li>
-			</ul>
-		</header>
 		<section id="work">
 			<div class="myProfile">
 				<div class="describeMe">
@@ -301,6 +297,7 @@
     </section>
     <script src="../slide/slide.js"></script>
 		<script src="scripts.js"></script>
+    <script src="./Login/login.js"></script>
     <!-- <script src="cards.js"></script> -->
 		
 	</body>

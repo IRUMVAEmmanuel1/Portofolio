@@ -48,7 +48,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
       icon: 'success',
       title: 'Success!',
       text: 'User registered successfully.',
-      timer: 2000, // 2 seconds
+      timer: 5000, // 2 seconds
       timerProgressBar: true,
       onClose: () => {
         window.location.href = "../Login/login.html";

@@ -6,28 +6,23 @@
 <title>Login</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
 <link
 href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap"
 rel="stylesheet" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <link rel="stylesheet" href="login.css">
-<!-- <script src="userLoginValidate.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+
 </head>
 <body>
 <div class="formContainer">
 <h2>Login Form</h2>
 <form class="form" id="form">
   <div class="form-group">
-    <label for="fname">Username</label>
-    <input type="text" id="fname" placeholder="Enter your username" />
-    <span id="name_error" style="color: red;"></span>
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Enter your email" />
+    <span id="email_error" style="color: red;"></span>
   </div>
   <div class="form-group">
     <label for="password">Password:</label>
@@ -42,14 +37,14 @@ rel="stylesheet" />
     </span>
   </p>
   
-  <a href="../adminDashboard/index.html"><button type="submit" class="submit">Login</a></button></a>
-  
-
+  <button type="submit" class="submit">Login</button>
 </form>
 
 </div>
 
-<script src="./loginValidation.js"></script>
-<!-- <script src="../Register/reguser.js"></script> -->
+<script src="./login.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
 </body>
 </html>

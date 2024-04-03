@@ -6,6 +6,15 @@
   <title>Single Blog</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="SingleBlog.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <style>
+    #likeButton {
+      background-color: blue; /* Set default color */
+    }
+    #likeButton.unliked {
+      background-color: red; /* Set color when unliked */
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -29,14 +38,11 @@
             <input type="text" id="usernameInput" placeholder="Your Username">
           </div>
           <div class="form-control">
-            <input type="email" id="emailInput" placeholder="Your Email">
-          </div>
-          <div class="form-control">
             <textarea name="text" id="commentInput" cols="30" rows="10" placeholder="Add a comment"></textarea>
           </div>
           <div class="form-control">
             <button type="submit">Submit</button>
-            <button type="submit" class="home"><a href="./index.html">Back Home</a></button>
+            <button type="button" class="home"><a href="./index.html">Back Home</a></button>
           </div>
         </form>
       </div>
@@ -46,6 +52,8 @@
       document.addEventListener("DOMContentLoaded", function() {
         const loader = document.getElementById("loader");
         const blogContentContainer = document.getElementById("blogContentContainer");
+        const loggedIn = localStorage.getItem("token") !== null;
+        const currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
         loader.style.display = "block"; // Show loader
 
@@ -71,6 +79,41 @@
               document.getElementById("blogTitle").textContent = blog.title;
               document.getElementById("blogImage").src = blog.image;
               document.getElementById("blogContent").textContent = blog.content;
+
+              // Update like count and button color
+              const likeCount = document.getElementById("likeCount");
+              const likeButton = document.getElementById("likeButton");
+              likeCount.textContent = blog.likes;
+              if (blog.liked) {
+                likeButton.textContent = "Unlike";
+                likeButton.classList.add("liked");
+                likeButton.classList.remove("unliked");
+              } else {
+                likeButton.textContent = "Like";
+                likeButton.classList.add("unliked");
+                likeButton.classList.remove("liked");
+              }
+
+              // Display comments
+              const commentList = document.getElementById("commentList");
+              blog.comments.forEach(comment => {
+                const li = document.createElement("li");
+                li.textContent = `${comment.username}: ${comment.comment}`;
+                commentList.appendChild(li);
+              });
+
+              // Enable comment form fields if user is logged in
+              if (loggedIn) {
+                document.getElementById("usernameInput").value = currentUser.username;
+                document.getElementById("commentInput").disabled = false;
+                document.querySelector("#commentForm button[type='submit']").disabled = false;
+              } else {
+                // Show message to log in first
+                const commentSection = document.getElementById("commentSection");
+                const loginMessage = document.createElement("p");
+                loginMessage.textContent = "Please log in to add a comment.";
+                commentSection.appendChild(loginMessage);
+              }
             } else {
               // Display an error message if the blog is not found
               document.getElementById("blogContent").textContent = "Blog not found";
@@ -83,16 +126,61 @@
 
         // Handle like button click event
         document.getElementById("likeButton").addEventListener("click", function() {
+          if (!loggedIn) {
+            // Show message to log in first
+            swal("Login Required", "Please log in to like the blog.", "warning");
+            return;
+          }
           // Implement like functionality here
+          const likeButton = document.getElementById("likeButton");
+          const liked = likeButton.classList.contains("liked");
+          const likeCount = document.getElementById("likeCount");
+          let likes = parseInt(likeCount.textContent);
+
+          if (liked) {
+            // Unlike the blog
+            likeButton.textContent = "Like";
+            likeButton.classList.remove("liked");
+            likeButton.classList.add("unliked");
+            likes--;
+          } else {
+            // Like the blog
+            likeButton.textContent = "Unlike";
+            likeButton.classList.remove("unliked");
+            likeButton.classList.add("liked");
+            likes++;
+          }
+
+          likeCount.textContent = likes;
+
+          // Update the like status on the server
+          // Example: You can make a fetch request to update the like status on the server
         });
 
         // Handle comment form submission
         document.getElementById("commentForm").addEventListener("submit", function(event) {
           event.preventDefault(); // Prevent form submission
+          if (!loggedIn) {
+            // Show message to log in first
+            swal("Login Required", "Please log in to add a comment.", "warning");
+            return;
+          }
           const username = document.getElementById("usernameInput").value;
-          const email = document.getElementById("emailInput").value;
           const comment = document.getElementById("commentInput").value;
-          // Implement comment submission here
+
+          // Add the comment to the UI
+          const commentList = document.getElementById("commentList");
+          const li = document.createElement("li");
+          li.textContent = `${username}: ${comment}`;
+          commentList.appendChild(li);
+
+          // Show SweetAlert notification
+          swal("Comment Posted!", "Your comment has been successfully posted.", "success");
+
+          // Clear the comment input field
+          document.getElementById("commentInput").value = "";
+
+          // You can also send the comment to the server here for further processing
         });
       });
     </script>

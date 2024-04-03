@@ -1,48 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single Blog</title>
-  <script src="./cards.js"></script>
-  <script src="./adminDashboard/adminValidation.js"></script>
-  <!-- Include necessary stylesheets and scripts -->
-</head>
-<body>
-  <!-- Single blog content -->
-  <div id="singleBlogContent">
-    <!-- Blog title -->
-    <h2 id="blogTitle"></h2>
-    <!-- Blog image -->
-    <img id="blogImage" src="" alt="Blog Image">
-    <!-- Blog content -->
-    <p id="blogContent"></p>
-    <!-- Like button -->
-    <button id="likeButton">Like</button>
-    <!-- Comments section -->
-    <div id="commentsSection">
-      <!-- Comments will be displayed here -->
-    </div>
-    <!-- Comment form -->
-    <form id="commentForm">
-      <input type="text" id="commentInput" placeholder="Add a comment">
-      <button type="submit">Comment</button>
-    </form>
-  </div>
-  <table id="articleTable" style="margin-top: 10%;">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Image</th>
-        <th>Content</th>
-        <th>Actions</th> 
-      </tr>
-    </thead>
-    <tbody id="articleTableBody">
-      <!-- Table body will be populated dynamically -->
-    </tbody>
-  </table>
-  
-  <!-- Include necessary scripts -->
-</body>
-</html>
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Display all articles from localStorage on page load
+  displayArticles();
+});
+
+function displayArticles() {
+  const articles = JSON.parse(localStorage.getItem("articles")) || [];
+  articles.forEach(function(article) {
+    displayArticleInTable(article);
+  });
+}
+
+function displayArticleInTable(article) {
+  const tableBody = document.getElementById("articleTableBody");
+  const row = tableBody.insertRow();
+  row.innerHTML = `
+    <td>${article.title}</td>
+    <td><img src="${article.image}" alt="Image" style="width: 100px;"></td>
+    <td>${article.content}</td>
+  `;
+}
+// Function to create edit and delete icons
+function createEditDeleteIcons() {
+  const editIcon = '<i class="fa fa-edit" aria-hidden="true"></i>';
+  const deleteIcon = '<i class="fa fa-trash-o" aria-hidden="true"></i>';
+  const editDeleteIcons = `${editIcon} ${deleteIcon}`;
+
+  return editDeleteIcons;
+}
+
+// Function to display articles in the table
+function displayArticleInTable(article, index) {
+  const tableBody = document.getElementById("articleTableBody");
+  const row = tableBody.insertRow();
+  row.innerHTML = `
+    <td>${article.title}</td>
+    <td><img src="${article.image}" alt="Image" style="width: 100px;"></td>
+    <td>${article.content}</td>
+    <td class="actions" data-index="${index}">${createEditDeleteIcons()}</td> <!-- Added data-index attribute -->
+  `;
+}
+
+// Add event listeners for edit and delete actions
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("fa-edit")) {
+    // Handle edit action
+    const rowIndex = event.target.closest("tr").rowIndex;
+    // Implement edit logic here, e.g., open edit modal
+    console.log("Edit clicked for row index:", rowIndex);
+  } else if (event.target.classList.contains("fa-trash-o")) {
+    // Handle delete action
+    const rowIndex = event.target.closest("tr").rowIndex;
+    const tableRow = event.target.closest("tr");
+    const tableBody = document.getElementById("articleTableBody");
+    const dataIndex = tableRow.querySelector(".actions").getAttribute("data-index");
+    
+    // Delete corresponding article from localStorage
+    let articles = JSON.parse(localStorage.getItem("articles")) || [];
+    articles.splice(dataIndex, 1); // Remove article at the given index
+    localStorage.setItem("articles", JSON.stringify(articles));
+    
+    // Remove row from the table
+    tableBody.removeChild(tableRow);
+    
+    console.log("Delete clicked for row index:", rowIndex);
+  }
+});
+
+// Function to open the edit modal with article details
+function openEditModal(rowIndex) {
+  const articles = JSON.parse(localStorage.getItem("articles")) || [];
+  const article = articles[rowIndex];
+
+  // Fill modal form with article details
+  document.getElementById("editTitle").value = article.title;
+  document.getElementById("editContent").value = article.content;
+
+  // Show the modal
+  const modal = document.getElementById("editModal");
+  modal.style.display = "block";
+
+  // Close the modal when the close button is clicked
+  const closeBtn = document.querySelector("#editModal .close");
+  closeBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+  });
+
+  // Save changes when the "Save" button is clicked
+  document.getElementById("saveEdit").addEventListener("click", function() {
+    // Update article details
+    article.title = document.getElementById("editTitle").value;
+    article.content = document.getElementById("editContent").value;
+
+    // Update localStorage
+    localStorage.setItem("articles", JSON.stringify(articles));
+
+    // Close the modal
+    modal.style.display = "none";
+
+    // Update the table with the edited article
+    updateArticleInTable(rowIndex, article);
+  });
+}
+
+// Add event listeners for edit and delete actions
+document.addEventListener("click", function(event) {
+  if (event.target.classList.contains("fa-edit")) {
+    // Handle edit action
+    const rowIndex = event.target.closest("tr").rowIndex - 1; // Adjust for header row
+    openEditModal(rowIndex);
+  } else if (event.target.classList.contains("fa-trash-o")) {
+    // Handle delete action
+    const rowIndex = event.target.closest("tr").rowIndex;
+    const tableRow = event.target.closest("tr");
+    const dataIndex = tableRow.querySelector(".actions").getAttribute("data-index");
+    
+    // Delete corresponding article from localStorage
+    let articles = JSON.parse(localStorage.getItem("articles")) || [];
+    articles.splice(dataIndex, 1); // Remove article at the given index
+    localStorage.setItem("articles", JSON.stringify(articles));
+    
+    // Remove row from the table
+    tableRow.parentNode.removeChild(tableRow);
+  }
+});
+
+
+
+// Counting Articles total number start here 
+
+// Function to update the article count in the card
+// Function to update the article count in the card
+function updateArticleCountInCard() {
+  const articleCountElement = document.getElementById("articleCount");
+  const numArticles = countArticles();
+  articleCountElement.textContent = numArticles;
+}
+
+// Call the function to update the article count in the card
+updateArticleCountInCard();
+
+
+
+// Counting Articles total number ends here
