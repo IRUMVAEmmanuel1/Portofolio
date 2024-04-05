@@ -4,7 +4,7 @@ const Blogs =() => {
   const [blogs, setBlogs] = useState([]);
   const allBlogs  = async()=>{
     try {
-      const response = await fetch("http://localhost:5000/api/blogs") 
+      const response = await fetch("https://mybrand-bcke.onrender.com/api/blogs") 
       const data = await response.json()
       
       setBlogs(data.blogs)

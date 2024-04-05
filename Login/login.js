@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       try {
           // Make a POST request to the login API
-          const response = await fetch("http://localhost:5000/api/v1/users/login", {
+          const response = await fetch("https://mybrand-bcke.onrender.com/api/v1/users/login", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",

@@ -14,24 +14,6 @@ form.addEventListener('submit', (e)=>
     name_error.innerHTML = "Title is required"
   }
 })
-//validation form inputs before submitting data
-
-// function validateForm() {
-// 	var title = document.getElementById("title").value;
-// 	var image = document.getElementById("image").value;
-// 	var content = document.getElementById("content").value;
-
-// 	if (title == "") {
-// 		alert("Title is required");
-// 		return false;
-// 	} else if (image == "") {
-// 		alert("Image is required");
-// 		return false;
-// 	} else if (content == "") {
-// 		alert("Content is required");
-// 		return false;
-// 	}
-// }
 
 //function to show data
 function showData() {

@@ -10,7 +10,7 @@ const SingleBlog = () => {
 	const blogId = urlParams.get("id");
 	const FetchBlog = async () => {
 		try {
-			const response = await fetch(`http://localhost:5000/api/blogs/${blogId}`);
+			const response = await fetch(`https://mybrand-bcke.onrender.com/api/blogs/${blogId}`);
 			const data = await response.json();
 
 			setBlog(data.blogs);
@@ -20,7 +20,7 @@ const SingleBlog = () => {
 	};
 const FetchComment = async() =>{
   try {
-    const response = await fetch(`http://localhost:5000/api/blogs/${blogId}/comments`)
+    const response = await fetch(`https://mybrand-bcke.onrender.com/api/blogs/${blogId}/comments`)
     const data = await response.json();
     setComment(data.coment)
   
@@ -30,7 +30,7 @@ const FetchComment = async() =>{
 }
 const FetchLikes = async() =>{
   try {
-    const response = await fetch(`http://localhost:5000/api/blogs/${blogId}/likes`)
+    const response = await fetch(`https://mybrand-bcke.onrender.com/api/blogs/${blogId}/likes`)
     const data = await response.json();
     setLikes(data.likes)
   
@@ -47,7 +47,7 @@ const addComment = async (e) => {
   if(content){
       try{
           setSubmitting(true)
-          const res = await fetch(`http://localhost:5000/api/blogs/${blogId}/comments`,{
+          const res = await fetch(`https://mybrand-bcke.onrender.com/api/blogs/${blogId}/comments`,{
               method: "POST",
               headers: {
                   "Content-Type": "application/json",
@@ -78,7 +78,7 @@ const likeBlog = async () => {
     return
   }
   try{
-    const response = await fetch(`http://localhost:5000/api/blogs/${blogId}/likes`, {
+    const response = await fetch(`https://mybrand-bcke.onrender.com/api/blogs/${blogId}/likes`, {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${authorization}`
