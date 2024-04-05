@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
 	try {
-		const response = await fetch("http://localhost:5000/api/blogs", {
+		const response = await fetch("https://mybrand-bcke.onrender.com/api/blogs", {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",
