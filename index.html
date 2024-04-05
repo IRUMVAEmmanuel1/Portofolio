@@ -10,7 +10,9 @@
     <title>EI Portofolio</title>
     <link rel="stylesheet" href="style.css">
 		<script src="activeUser.js"></script>
-    <script></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -156,7 +158,7 @@
     
 		<section id="contact">
 			<div class="sectionTitle">
-				<h3>My Projects</h3>
+				<h3>My Blogs</h3>
 				<div id="loader" class="loader"></div> 
 			<div class="carousel-container">
         <div class="carousel-slide"   id="articleCardsContainer">  
@@ -300,6 +302,8 @@
     <script src="./Login/login.js"></script>
     <!-- <script src="logout.js"></script> -->
     <!-- <script src="cards.js"></script> -->
+    <script src="blogs.jsx" type="text/babel"></script>
+
 		
 	</body>
 </html>

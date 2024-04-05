@@ -14,8 +14,15 @@
 
 }
 
+#likeSection button:hover{
+  
+font-size: 14px;
+
+}
+
 #likeCount{
   font-size: 15px;
+  margin-left: 5px;
 }
 
 #blogContent{
@@ -57,9 +64,14 @@ input[type="text"],textarea, input[type="email"],  input[type="file"]::-moz-focu
   border: none;
  
 }
-
+.home{
+  margin-left: 1rem;
+}
  .home a{
   list-style-type: none;
   text-decoration: none;
   color: white;
+ }
+ .home a:hover{
+ font-size: 14px;
  }

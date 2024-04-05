@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				loader.style.display = "none"; // Hide loader
 
 				// Display fetched content in carousel
-				displayArticles(data.blogs);
+				// displayArticles(data.blogs);
 			})
 			.catch((error) => {
 				console.error("Error fetching blog content:", error);
@@ -82,14 +82,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="car">
           <h5 class="card-title">${article.title}</h5>
           <img src="${article.image}" class="card-img-top" alt="Article Image">
-          <p class="time">01,Jan,2024 <span>| WEBINAR</span></p>
+          <p class="time"> <span>| WEBINAR</span></p>
           <p class="card-text">${article.content}</p>
           <div class="viewsLike">
             <div class="views">
-              <p class="number">54&nbsp;<span class="allSpan">Views</span></p>
+              <p class="number">5&nbsp;<span class="allSpan">Views</span></p>
             </div>
             <div class="likes">
-              <p class="number"><span>Like</span> &nbsp;<span class="allSpan">45</span></p>
+              <p class="number"><span>Like</span> &nbsp;<span class="allSpan">5</span></p>
             </div>
           </div>
           <div class="readMore"><button class="readMoreButton"> <a href="singleBlog.html?id=${encodeURIComponent(
