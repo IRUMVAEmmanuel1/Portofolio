@@ -40,10 +40,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                 return;
             }
 
+            // Remove HTML paragraph tags from content
+            const strippedContent = content.value.trim().replace(/<p[^>]*>|<\/p>/g, '');
+
             // Prepare form data
             const formData = new FormData();
             formData.append("title", title.value.trim());
-            formData.append("content", content.value.trim());
+            formData.append("content", strippedContent);
             formData.append("image", image.files[0]);
 
             // Perform POST request

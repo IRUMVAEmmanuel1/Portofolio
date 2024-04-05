@@ -123,7 +123,10 @@ body {
 	transition: background 0.2s ease-out;
 	width: 18px;
 }
-
+#username{
+	margin-top: 1.3rem;
+	font-weight: bold;
+}
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
 	background: #333;
@@ -452,7 +455,9 @@ img {
 	display: block;
 	background-color: #ffffff;
 	border: 1px solid rgb(209, 209, 209);
-	padding: 20px;
+	padding: 18px;
+	margin-left: 5px;
+	width: 9px;
 	text-align: center;
 	color: var(--color-greyDark);
 	border-radius: 10px;
