@@ -15,7 +15,6 @@
 //     cardsContainer.appendChild(card);
 //   });
 // }
-
 // function createArticleCard(article) {
 //   const card = document.createElement("div");
 //   card.classList.add("card1");
